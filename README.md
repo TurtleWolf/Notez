@@ -58,7 +58,7 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 7
- npm i cross-env
+npm i cross-env
 ```
 
 ---
@@ -89,8 +89,8 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 9
- mkdir models
- touch models/Notes.mjs
+mkdir models
+touch models/Notes.mjs
 ```
 
 ---
@@ -135,9 +135,9 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 12
-code sample
-code sample
-code sample
+mkdir partials
+touch partials/header.hbs
+DEBUG=notez:* npm start
 ```
 
 ---
