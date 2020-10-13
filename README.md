@@ -105,9 +105,7 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 10
-code sample
-code sample
-code sample
+delete?? theoretical
 ```
 
 ---
@@ -122,9 +120,7 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 11
-code sample
-code sample
-code sample
+touch models/notes-memory.mjs
 ```
 
 ---
