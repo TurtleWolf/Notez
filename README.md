@@ -73,9 +73,8 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 8
-code sample
-code sample
-code sample
+touch approotdir.mjs
+touch appsupport.mjs
 ```
 
 ---
@@ -90,9 +89,8 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 9
-code sample
-code sample
-code sample
+ mkdir models
+ touch models/Notes.mjs
 ```
 
 ---
