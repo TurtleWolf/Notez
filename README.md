@@ -25,23 +25,25 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 6
- mkdir notez
- cd notez
- npx express-generator@4.x --view=hbs --git .
- npm install
-#  npm audit
- npm audit fix
- DEBUG=notez:* npm start
- mv app.js app.mjs
- mv routes/index.js routes/index.mjs
-#  mkdir public/assets
-#  mv public/images/ public/javascripts/ public/stylesheets/ public/assets/
- cd ..
- mv Ch05 Ch06 Ch07 Ch08 Ch09 Ch10 Ch11 Ch12 Ch13 Ch14 notez/public/images/
- git init
- git add .
- git commit -m "npx Express Generator"
- git remote add origin https://github.com/TurtleWolf/Notez.git
+mkdir notez
+cd notez
+npx express-generator@4.x --view=hbs --git .
+npm install
+# npm audit
+npm audit fix
+DEBUG=notez:* npm start
+mv app.js app.mjs
+mv routes/index.js routes/index.mjs
+# mkdir public/assets
+# mv public/images/ public/javascripts/ public/stylesheets/ public/assets/
+cd ..
+mv Ch05 Ch06 Ch07 Ch08 Ch09 Ch10 Ch11 Ch12 Ch13 Ch14 favicon.ico notez/public/images/
+git init
+git add .
+git commit -m "npx Express Generator"
+git remote add origin https://github.com/TurtleWolf/Notez.git
+git push --set-upstream origin master
+npm i cross-env
 ```
 
 ---
