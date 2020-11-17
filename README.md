@@ -168,9 +168,7 @@ import * as notes from '../models/notes.mjs';
 ```
 
 ```bash section 14
-code sample
-code sample
-code sample
+touch views/noteview.hbs
 ```
 
 ---

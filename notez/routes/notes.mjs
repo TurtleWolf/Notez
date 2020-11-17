@@ -27,3 +27,14 @@ router.post('/save', async (req, res, next) => {
         res.redirect('/notes/view?key=' + req.body.notekey);
     } catch (err) { next(err); }
 });
+
+// Read Note (read)
+router.get('/view', async (req, res, next) => {
+    try {
+        let note = await notes.read(req.query.key);
+        res.render('noteview', {
+            title: note ? note.title : "",
+            notekey: req.query.key, note: note
+        });
+    } catch (err) { next(err); }
+});
