@@ -38,3 +38,15 @@ router.get('/view', async (req, res, next) => {
         });
     } catch (err) { next(err); }
 });
+
+// Edit note (update)
+router.get('/edit', async (req, res, next) => {
+    try {
+        const note = await notes.read(req.query.key);
+        res.render('noteedit', {
+            title: note ? ("Edit " + note.title) : "Add a Note",
+            docreate: false,
+            notekey: req.query.key, note: note
+        });
+    } catch (err) { next(err); }
+});
