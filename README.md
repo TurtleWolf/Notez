@@ -178,14 +178,24 @@ touch views/noteview.hbs
 **_`Editing an existing note – update`_**
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+// Edit note (update)
+router.get('/edit', async (req, res, next) => {
+  try {
+    const note = await notes.read(req.query.key);
+    res.render('noteedit', {
+      title: note ? 'Edit ' + note.title : 'Add a Note',
+      docreate: false,
+      notekey: req.query.key,
+      note: note,
+    });
+  } catch (err) {
+    next(err);
+  }
+});
 ```
 
 ```bash section 15
-code sample
-code sample
-code sample
+null
 ```
 
 ---
