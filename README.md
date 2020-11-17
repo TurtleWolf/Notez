@@ -204,15 +204,47 @@ null
 
 **_`Editing an existing note – update`_**
 
+#### **routes/notes.mjs**
+
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+// Ask to Delete note (destroy)
+router.get('/destroy', async (req, res, next) => {
+  try {
+    const note = await notes.read(req.query.key);
+    res.render('notedestroy', {
+      title: note ? note.title : '',
+      notekey: req.query.key,
+      note: note,
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Really destroy note (destroy)
+router.post('/destroy/confirm', async (req, res, next) => {
+  try {
+    await notes.destroy(req.body.notekey);
+    res.redirect('/');
+  } catch (err) {
+    next(err);
+  }
+});
 ```
 
 ```bash section 16
-code sample
-code sample
-code sample
+touch views/notedestroy.hbs
+```
+
+#### **views/notedestroy.hbs**
+
+```javascript
+<form method='POST' action='/notes/destroy/confirm'>
+<input type='hidden' name='notekey' value='{{#if note}}{{notekey}}{{/if}}'>
+<p>Delete {{note.title}}?</p>
+<br/><input type='submit' value='DELETE' />
+<a href="/notes/view?key={{#if note}}{{notekey}}{{/if}}">Cancel</a>
+</form>
 ```
 
 ---
