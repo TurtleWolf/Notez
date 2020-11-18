@@ -352,14 +352,14 @@ null
 **_`Learning the mobile-first paradigm theory`_**
 
 ```bash section 3
-code sample
-code sample
-code sample
+null
 ```
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+#### **notez/public/stylessheets/styles.css**
+
+```CSS
+@media screen and (min-width: 600px) { /* Screens above 600px width */ }
+@media screen and (min-width: 960px) { /* Screens above 960px width */ }
 ```
 
 ---

@@ -11,3 +11,10 @@ header {
   background: #eeeeee;
   padding: 5px;
 }
+
+@media screen and (min-width: 600px) {
+  /* Screens above 600px width */
+}
+@media screen and (min-width: 960px) {
+  /* Screens above 960px width */
+}
