@@ -299,14 +299,11 @@ null
 **_`Summary`_**
 
 ```bash section 19
-code sample
-code sample
-code sample
+null
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -324,14 +321,11 @@ import * as notes from '../models/notes.mjs';
 **_`Implementing the Mobile-First Paradigm`_**
 
 ```bash section 1
-code sample
-code sample
-code sample
+null
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -341,14 +335,14 @@ import * as notes from '../models/notes.mjs';
 **_`Understanding the problem – the Notes app isn't mobile-friendly`_**
 
 ```bash section 2
-code sample
-code sample
-code sample
+null
 ```
 
+#### **views/noteedit.hbs**
+
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+<br/><textarea rows=5 cols=80 name='body'
+    >{{#if note }}{{note.body}}{{/if}}</textarea>
 ```
 
 ---
