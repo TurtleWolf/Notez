@@ -279,14 +279,17 @@ import * as notes from '../models/notes.mjs';
 **_`Scaling up – running multiple Notes instances`_**
 
 ```bash section 18
-code sample
-code sample
-code sample
+null
 ```
 
+#### **notez/package.json**
+
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+ "scripts": {
+    "start": "cross-env DEBUG=notez:* node ./app.mjs",
+    "server1": "cross-env DEBUG=notez:* PORT=3001 node ./app.mjs",
+    "server2": "cross-env DEBUG=notez:* PORT=3002 node ./app.mjs"
+  },
 ```
 
 ---
