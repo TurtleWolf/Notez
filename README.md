@@ -253,15 +253,23 @@ touch views/notedestroy.hbs
 
 **_`Theming your Express application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+```bash section 17
+null
 ```
 
-```bash section 17
-code sample
-code sample
-code sample
+#### **public/stylesheets/style.css**
+
+```javascript
+body {
+  padding: 5px;
+  ..
+}
+..
+header {
+    background: #eeeeee;
+    padding: 5px;
+} rt * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -270,15 +278,15 @@ code sample
 
 **_`Scaling up – running multiple Notes instances`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -287,15 +295,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -312,15 +320,15 @@ code sample
 
 **_`Implementing the Mobile-First Paradigm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -329,15 +337,15 @@ code sample
 
 **_`Understanding the problem – the Notes app isn't mobile-friendly`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -346,15 +354,15 @@ code sample
 
 **_`Learning the mobile-first paradigm theory`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -363,15 +371,15 @@ code sample
 
 **_`Using Twitter Bootstrap on the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -380,15 +388,15 @@ code sample
 
 **_`Setting up Bootstrap`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -397,15 +405,15 @@ code sample
 
 **_`Adding Bootstrap to the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -414,15 +422,15 @@ code sample
 
 **_`Alternative layout frameworks`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -431,15 +439,15 @@ code sample
 
 **_`Flexbox and CSS Grids`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -448,15 +456,15 @@ code sample
 
 **_`Mobile-first design for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -465,15 +473,15 @@ code sample
 
 **_`Laying the Bootstrap grid foundation`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -482,15 +490,15 @@ code sample
 
 **_`Responsive page structure for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -499,15 +507,15 @@ code sample
 
 **_`Using icon libraries and improving visual appeal`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -516,15 +524,15 @@ code sample
 
 **_`Responsive page header navigation bar`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -533,15 +541,15 @@ code sample
 
 **_`Improving the Notes list on the front page`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -550,15 +558,15 @@ code sample
 
 **_`Cleaning up the note viewing experience`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -567,15 +575,15 @@ code sample
 
 **_`Cleaning up the add/edit note form`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -584,15 +592,15 @@ code sample
 
 **_`Cleaning up the delete-note window`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -601,15 +609,15 @@ code sample
 
 **_`Customizing a Bootstrap build`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -618,15 +626,15 @@ code sample
 
 **_`Using third-party custom Bootstrap themes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -635,15 +643,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -660,15 +668,15 @@ code sample
 
 **_`Data Storage and Retrieval`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -677,15 +685,15 @@ code sample
 
 **_`Remembering that data storage requires asynchronous code`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -694,15 +702,15 @@ code sample
 
 **_`Logging and capturing uncaught errors`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -711,15 +719,15 @@ code sample
 
 **_`Request logging with morgan`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -728,15 +736,15 @@ code sample
 
 **_`Debugging messages`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -745,15 +753,15 @@ code sample
 
 **_`Capturing stdout and stderr`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -762,15 +770,15 @@ code sample
 
 **_`Capturing uncaught exceptions and unhandled rejected Promises`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -779,15 +787,15 @@ code sample
 
 **_`Storing notes in a filesystem`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -796,15 +804,15 @@ code sample
 
 **_`Dynamically importing ES6 modules`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -813,15 +821,15 @@ code sample
 
 **_`Running the Notes application with filesystem storage`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -830,15 +838,15 @@ code sample
 
 **_`Storing notes with the LevelDB datastore`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -847,15 +855,15 @@ code sample
 
 **_`Closing database connections when closing the process`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -864,15 +872,15 @@ code sample
 
 **_`Storing notes in SQL with SQLite3`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -881,15 +889,15 @@ code sample
 
 **_`The SQLite3 database schema`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -898,15 +906,15 @@ code sample
 
 **_`The SQLite3 model code`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -915,15 +923,15 @@ code sample
 
 **_`Running Notes with SQLite3`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -932,15 +940,15 @@ code sample
 
 **_`Storing notes the ORM way with Sequelize`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -949,15 +957,15 @@ code sample
 
 **_`Configuring Sequelize and connecting to a database`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -966,15 +974,15 @@ code sample
 
 **_`Creating a Sequelize model for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -983,15 +991,15 @@ code sample
 
 **_`Running the Notes application with Sequelize`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1000,15 +1008,15 @@ code sample
 
 **_`Storing notes in MongoDB`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 21
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1017,15 +1025,15 @@ code sample
 
 **_`A MongoDB model for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 22
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1034,15 +1042,15 @@ code sample
 
 **_`Running the Notes application with MongoDB`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 23
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1051,15 +1059,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 24
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1076,15 +1084,15 @@ code sample
 
 **_`Authenticating Users with a Microservice`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1093,15 +1101,15 @@ code sample
 
 **_`Creating a user information microservice`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1110,15 +1118,15 @@ code sample
 
 **_`Developing the user information model`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1127,15 +1135,15 @@ code sample
 
 **_`Creating a REST server for user information`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1144,15 +1152,15 @@ code sample
 
 **_`Creating a command-line tool to test and administer the user authentication server`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1161,15 +1169,15 @@ code sample
 
 **_`Creating a user in the user information database`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1178,15 +1186,15 @@ code sample
 
 **_`Reading user data from the user information service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1195,15 +1203,15 @@ code sample
 
 **_`Updating user information in the user information service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1212,15 +1220,15 @@ code sample
 
 **_`Deleting a user record from the user information service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1229,15 +1237,15 @@ code sample
 
 **_`Checking the user's password in the user information service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1246,15 +1254,15 @@ code sample
 
 **_`Providing login support for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1263,15 +1271,15 @@ code sample
 
 **_`Accessing the user authentication REST API`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1280,15 +1288,15 @@ code sample
 
 **_`Incorporating login and logout routing functions in the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1297,15 +1305,15 @@ code sample
 
 **_`Login/logout changes to app.mjs`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1314,15 +1322,15 @@ code sample
 
 **_`Login/logout changes in routes/index.mjs`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1331,15 +1339,15 @@ code sample
 
 **_`Login/logout changes required in routes/notes.mjs`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1348,15 +1356,15 @@ code sample
 
 **_`Viewing template changes supporting login/logout`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1365,15 +1373,15 @@ code sample
 
 **_`Running the Notes application with user authentication`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1382,15 +1390,15 @@ code sample
 
 **_`Providing Twitter login support for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1399,15 +1407,15 @@ code sample
 
 **_`Registering an application with Twitter`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1416,15 +1424,15 @@ code sample
 
 **_`Storing authentication tokens`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 21
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1433,15 +1441,15 @@ code sample
 
 **_`Implementing TwitterStrategy`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 22
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1450,15 +1458,15 @@ code sample
 
 **_`Keeping secrets and passwords secure`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 23
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1467,15 +1475,15 @@ code sample
 
 **_`Adding password encryption to the user information service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 24
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1484,15 +1492,15 @@ code sample
 
 **_`Implementing encrypted password support in the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 25
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1501,15 +1509,15 @@ code sample
 
 **_`Running the Notes application stack`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 26
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1518,15 +1526,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 27
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1543,15 +1551,15 @@ code sample
 
 **_`Dynamic Client/Server Interaction with Socket.IO`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1560,15 +1568,15 @@ code sample
 
 **_`Introducing Socket.IO`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1577,15 +1585,15 @@ code sample
 
 **_`Initializing Socket.IO with Express`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1594,15 +1602,15 @@ code sample
 
 **_`Real-time updates on the Notes homepage`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1611,15 +1619,15 @@ code sample
 
 **_`Refactoring the NotesStore classes to emit events`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1628,15 +1636,15 @@ code sample
 
 **_`Real-time changes in the Notes home page`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1645,15 +1653,15 @@ code sample
 
 **_`Changing the home page and layout templates`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1662,15 +1670,15 @@ code sample
 
 **_`Adding a Socket.IO client to the Notes home page`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1679,15 +1687,15 @@ code sample
 
 **_`Running Notes with real-time home page updates`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1696,15 +1704,15 @@ code sample
 
 **_`A word on enabling debug tracing in Socket.IO code`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1713,15 +1721,15 @@ code sample
 
 **_`Real-time action while viewing notes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1730,15 +1738,15 @@ code sample
 
 **_`Changing the note view template for real-time action`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1747,15 +1755,15 @@ code sample
 
 **_`Running Notes with pseudo-real-time updates while viewing a note`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1764,15 +1772,15 @@ code sample
 
 **_`Inter-user chat and commenting for Notes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1781,15 +1789,15 @@ code sample
 
 **_`Data model for storing messages`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1798,15 +1806,15 @@ code sample
 
 **_`Adding support for messages to the Notes router`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1815,15 +1823,15 @@ code sample
 
 **_`Changing the note view template for messages`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1832,15 +1840,15 @@ code sample
 
 **_`Composing messages on the Note view page`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1849,15 +1857,15 @@ code sample
 
 **_`Showing any existing messages on the Note view page`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1866,15 +1874,15 @@ code sample
 
 **_`Deleting messages on the Notes view page`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1883,15 +1891,15 @@ code sample
 
 **_`Running Notes and passing messages`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 21
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1900,15 +1908,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 22
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1925,15 +1933,15 @@ code sample
 
 **_`Deploying Node.js Applications to Linux Servers`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1942,15 +1950,15 @@ code sample
 
 **_`Notes application architecture and deployment considerations`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1959,15 +1967,15 @@ code sample
 
 **_`Traditional Linux deployment for Node.js services`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1976,15 +1984,15 @@ code sample
 
 **_`Installing Multipass`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -1993,15 +2001,15 @@ code sample
 
 **_`Handling a failure to launch Multipass instances on Windows`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2010,15 +2018,15 @@ code sample
 
 **_`Provisioning a server for the user authentication service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2027,15 +2035,15 @@ code sample
 
 **_`Testing the deployed user authentication service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2044,15 +2052,15 @@ code sample
 
 **_`Script execution in PowerShell on Windows`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2061,15 +2069,15 @@ code sample
 
 **_`Provisioning a server for the Notes service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2078,15 +2086,15 @@ code sample
 
 **_`Adjusting Twitter authentication to work on the server`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2095,15 +2103,15 @@ code sample
 
 **_`Setting up PM2 to manage Node.js processes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2112,15 +2120,15 @@ code sample
 
 **_`Familiarizing ourselves with PM2`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2129,15 +2137,15 @@ code sample
 
 **_`Scripting the PM2 setup on Multipass`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2146,15 +2154,15 @@ code sample
 
 **_`Integrating the PM2 setup as persistent background processes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2163,15 +2171,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2188,15 +2196,15 @@ code sample
 
 **_`Deploying Node.js Microservices with Docker`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2205,15 +2213,15 @@ code sample
 
 **_`Setting up Docker on your laptop or computer`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2222,15 +2230,15 @@ code sample
 
 **_`Installing and starting Docker with Docker for Windows or macOS`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2239,15 +2247,15 @@ code sample
 
 **_`Familiarizing ourselves with Docker`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2256,15 +2264,15 @@ code sample
 
 **_`Setting up the user authentication service in Docker`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2273,15 +2281,15 @@ code sample
 
 **_`Launching a MySQL container in Docker`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2290,15 +2298,15 @@ code sample
 
 **_`The ephemeral nature of Docker containers`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2307,15 +2315,15 @@ code sample
 
 **_`Defining the Docker architecture for the authentication service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2324,15 +2332,15 @@ code sample
 
 **_`Creating the MySQL container for the authentication service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2341,15 +2349,15 @@ code sample
 
 **_`Security in the database container`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2358,15 +2366,15 @@ code sample
 
 **_`Dockerizing the authentication service`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2375,15 +2383,15 @@ code sample
 
 **_`Creating the authentication service Dockerfile`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2392,15 +2400,15 @@ code sample
 
 **_`Building and running the authentication service Docker container`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2409,15 +2417,15 @@ code sample
 
 **_`Exploring AuthNet`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2426,15 +2434,15 @@ code sample
 
 **_`Creating FrontNet for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2443,15 +2451,15 @@ code sample
 
 **_`MySQL container for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2460,15 +2468,15 @@ code sample
 
 **_`Dockerizing the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2477,15 +2485,15 @@ code sample
 
 **_`Managing multiple containers with Docker Compose`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2494,15 +2502,15 @@ code sample
 
 **_`Docker Compose file for the Notes stack`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2511,15 +2519,15 @@ code sample
 
 **_`Building and running the Notes application with Docker Compose`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2528,15 +2536,15 @@ code sample
 
 **_`Using Redis for scaling the Notes application stack`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 21
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2545,15 +2553,15 @@ code sample
 
 **_`Testing session management with multiple Notes service instances`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 22
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2562,15 +2570,15 @@ code sample
 
 **_`Storing Express/Passport session data in a Redis server`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 23
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2579,15 +2587,15 @@ code sample
 
 **_`Distributing Socket.IO messages using Redis`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 24
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2596,15 +2604,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 25
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2621,15 +2629,15 @@ code sample
 
 **_`Deploying a Docker Swarm to AWS EC2 with Terraform`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2638,15 +2646,15 @@ code sample
 
 **_`Signing up with AWS and configuring the AWS CLI`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2655,15 +2663,15 @@ code sample
 
 **_`Finding your way around the AWS account`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2672,15 +2680,15 @@ code sample
 
 **_`Setting up the AWS CLI using AWS authentication credentials`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2689,15 +2697,15 @@ code sample
 
 **_`Creating an IAM user account, groups, and roles`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2706,15 +2714,15 @@ code sample
 
 **_`Creating an EC2 key pair`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2723,15 +2731,15 @@ code sample
 
 **_`An overview of the AWS infrastructure to be deployed`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2740,15 +2748,15 @@ code sample
 
 **_`Using Terraform to create an AWS infrastructure`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2757,15 +2765,15 @@ code sample
 
 **_`Configuring an AWS VPC with Terraform`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2774,15 +2782,15 @@ code sample
 
 **_`Configuring the AWS gateway and subnet resources`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2791,15 +2799,15 @@ code sample
 
 **_`Deploying the infrastructure to AWS using Terraform`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2808,15 +2816,15 @@ code sample
 
 **_`Setting up a Docker Swarm cluster on AWS EC2`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2825,15 +2833,15 @@ code sample
 
 **_`Deploying a single-node Docker Swarm on a single EC2 instance`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2842,15 +2850,15 @@ code sample
 
 **_`Adding an EC2 instance and configuring Docker`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2859,15 +2867,15 @@ code sample
 
 **_`Launching the EC2 instance on AWS`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2876,15 +2884,15 @@ code sample
 
 **_`Handling the AWS EC2 key-pair file`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2893,15 +2901,15 @@ code sample
 
 **_`Testing the initial Docker Swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2910,15 +2918,15 @@ code sample
 
 **_`Setting up remote control access to a Docker Swarm hosted on EC2`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2927,15 +2935,15 @@ code sample
 
 **_`Setting up ECR repositories for Notes Docker images`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2944,15 +2952,15 @@ code sample
 
 **_`Using environment variables for AWS CLI commands`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2961,15 +2969,15 @@ code sample
 
 **_`Defining a process to build Docker images and push them to the AWS ECR`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 21
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2978,15 +2986,15 @@ code sample
 
 **_`Creating a Docker stack file for deployment to Docker Swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 22
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -2995,15 +3003,15 @@ code sample
 
 **_`Creating a Docker stack file from the Notes Docker compose file`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 23
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3012,15 +3020,15 @@ code sample
 
 **_`Placing containers across the swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 24
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3029,15 +3037,15 @@ code sample
 
 **_`Configuring secrets in Docker Swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 25
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3046,15 +3054,15 @@ code sample
 
 **_`Configuring secrets in Docker Swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 26
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3063,32 +3071,30 @@ code sample
 
 **_`Provisioning EC2 instances for a full Docker swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 27
 code sample
 code sample
 code sample
 ```
 
----
-
-### Ch12 section 28
-
-**_`Provisioning EC2 instances for a full Docker swarm`_**
-
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
 ```
 
+### Ch12 section 28
+
+**_`Provisioning EC2 instances for a full Docker swarm`_**
+
 ```bash section 28
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3097,15 +3103,15 @@ code sample
 
 **_`Implementing semi-automatic initialization of the Docker Swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 29
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3114,15 +3120,15 @@ code sample
 
 **_`Preparing the Docker Swarm before deploying the Notes stack`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 30
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3148,15 +3154,15 @@ code sample
 
 **_`Preparing to deploy the Notes stack to the swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 32
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3165,15 +3171,15 @@ code sample
 
 **_`Deploying the Notes stack to the swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 33
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3182,15 +3188,15 @@ code sample
 
 **_`Verifying the correct launch of the Notes application stack`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 34
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3199,15 +3205,15 @@ code sample
 
 **_`Diagnosing a failure to launch the database services`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 35
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3216,15 +3222,15 @@ code sample
 
 **_`Testing the deployed Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 36
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3233,15 +3239,15 @@ code sample
 
 **_`Logging in with a regular account on Notes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 37
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3250,15 +3256,15 @@ code sample
 
 **_`Diagnosing an inability to log in with Twitter credentials`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 38
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3267,15 +3273,15 @@ code sample
 
 **_`Scaling the Notes instances`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 39
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3284,15 +3290,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 40
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3309,15 +3315,15 @@ code sample
 
 **_`Unit Testing and Functional Testing`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3326,15 +3332,15 @@ code sample
 
 **_`Assert – the basis of testing methodologies`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3343,15 +3349,15 @@ code sample
 
 **_`Testing a Notes model`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3360,15 +3366,15 @@ code sample
 
 **_`Mocha and Chai­ – the chosen test tools`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3377,15 +3383,15 @@ code sample
 
 **_`Notes model test suite`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3394,15 +3400,15 @@ code sample
 
 **_`Creating the initial Notes model test case`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3411,15 +3417,15 @@ code sample
 
 **_`Running the first test case`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3428,15 +3434,15 @@ code sample
 
 **_`Adding some tests`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3445,15 +3451,15 @@ code sample
 
 **_`More tests for the Notes model`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3462,15 +3468,15 @@ code sample
 
 **_`Diagnosing test failures`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3479,15 +3485,15 @@ code sample
 
 **_`Testing against databases that require server setup – MySQL and MongoDB`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3496,15 +3502,15 @@ code sample
 
 **_`Using Docker Swarm to manage test infrastructure`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3513,15 +3519,15 @@ code sample
 
 **_`Using Docker Swarm to deploy test infrastructure`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3530,15 +3536,15 @@ code sample
 
 **_`Executing tests under Docker Swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3547,15 +3553,15 @@ code sample
 
 **_`MongoDB setup under Docker and testing Notes against MongoDB`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3564,15 +3570,15 @@ code sample
 
 **_`Testing REST backend services`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3581,15 +3587,15 @@ code sample
 
 **_`Automating test results reporting`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3598,15 +3604,15 @@ code sample
 
 **_`Frontend headless browser testing with Puppeteer`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3615,15 +3621,15 @@ code sample
 
 **_`Setting up a Puppeteer-based testing project directory`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3632,15 +3638,15 @@ code sample
 
 **_`Creating an initial Puppeteer test for the Notes application stack`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3649,15 +3655,15 @@ code sample
 
 **_`Executing the initial Puppeteer test`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 21
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3666,15 +3672,15 @@ code sample
 
 **_`Testing login/logout functionality in Notes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 22
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3683,15 +3689,15 @@ code sample
 
 **_`Testing the ability to add Notes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 23
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3700,15 +3706,15 @@ code sample
 
 **_`Implementing negative tests with Puppeteer`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 24
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3717,15 +3723,15 @@ code sample
 
 **_`Testing login with a bad user ID`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 25
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3734,15 +3740,15 @@ code sample
 
 **_`Testing a response to a bad URL`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 26
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3751,15 +3757,15 @@ code sample
 
 **_`Improving testability in the Notes UI`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 27
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3768,15 +3774,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 28
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3793,15 +3799,15 @@ code sample
 
 **_`Security in Node.js Applications`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 1
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3810,15 +3816,15 @@ code sample
 
 **_`Implementing HTTPS in Docker for deployed Node.js applications`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 2
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3827,15 +3833,15 @@ code sample
 
 **_`Assigning a domain name for an application deployed on AWS EC2`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 3
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3844,15 +3850,15 @@ code sample
 
 **_`Updating the Twitter application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 4
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3861,15 +3867,15 @@ code sample
 
 **_`Planning how to use Let's Encrypt`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 5
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3878,15 +3884,15 @@ code sample
 
 **_`Using NGINX and Let's Encrypt in Docker to implement HTTPS for Notes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 6
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3895,15 +3901,15 @@ code sample
 
 **_`Adding the Cronginx container to support HTTPS on Notes`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 7
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3912,15 +3918,15 @@ code sample
 
 **_`Creating an NGINX configuration to support registering domains with Let's Encrypt`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 8
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3929,15 +3935,15 @@ code sample
 
 **_`Adding the required directories on the EC2 host`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 9
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3946,15 +3952,15 @@ code sample
 
 **_`Deploying the EC2 cluster and Docker swarm`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 10
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3963,15 +3969,15 @@ code sample
 
 **_`Registering a domain with Let's Encrypt`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 11
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3980,15 +3986,15 @@ code sample
 
 **_`Implementing an NGINX HTTPS configuration using Let's Encrypt certificates`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 12
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -3997,15 +4003,15 @@ code sample
 
 **_`Testing HTTPS support for the Notes application`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 13
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4014,15 +4020,15 @@ code sample
 
 **_`Using Helmet for across-the-board security in Express applications`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 14
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4031,15 +4037,15 @@ code sample
 
 **_`Using Helmet to set the Content-Security-Policy header`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 15
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4048,15 +4054,15 @@ code sample
 
 **_`Making the ContentSecurityPolicy configurable`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 16
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4065,15 +4071,15 @@ code sample
 
 **_`Using Helmet to set the X-DNS-Prefetch-Control header`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 17
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4082,15 +4088,15 @@ code sample
 
 **_`Using Helmet to control enabled browser features using the Feature-Policy header`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 18
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4099,32 +4105,30 @@ code sample
 
 **_`Using Helmet to set the X-Frame-Options header`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 19
 code sample
 code sample
 code sample
 ```
 
----
-
-### Ch14 section 20
-
-**_`Using Helmet to remove the X-Powered-By header`_**
-
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
 ```
 
+### Ch14 section 20
+
+**_`Improving HTTPS with Strict Transport Security`_**
+
 ```bash section 20
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4133,15 +4137,15 @@ code sample
 
 **_`Improving HTTPS with Strict Transport Security`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 21
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4150,15 +4154,15 @@ code sample
 
 **_`Mitigating XSS attacks with Helmet`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 22
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4167,15 +4171,15 @@ code sample
 
 **_`Addressing Cross-Site Request Forgery (CSRF) attacks`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 23
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4184,15 +4188,15 @@ code sample
 
 **_`Denying SQL injection attacks`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 24
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4201,15 +4205,15 @@ code sample
 
 **_`Scanning for known vulnerabilities in Node.js packages`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 25
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4218,15 +4222,15 @@ code sample
 
 **_`Using good cookie practices`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 26
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4235,15 +4239,15 @@ code sample
 
 **_`Hardening the AWS EC2 deployment`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 27
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4252,15 +4256,15 @@ code sample
 
 **_`AWS EC2 security best practices`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 28
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
@@ -4269,15 +4273,15 @@ code sample
 
 **_`Summary`_**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
-```
-
 ```bash section 29
 code sample
 code sample
 code sample
+```
+
+```javascript
+import * as notes from '../models/notes-memory.mjs';
+import * as notes from '../models/notes.mjs';
 ```
 
 ---
