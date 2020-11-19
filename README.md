@@ -369,14 +369,11 @@ null
 **_`Using Twitter Bootstrap on the Notes application`_**
 
 ```bash section 4
-code sample
-code sample
-code sample
+null
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -386,9 +383,12 @@ import * as notes from '../models/notes.mjs';
 **_`Setting up Bootstrap`_**
 
 ```bash section 5
-code sample
-code sample
-code sample
+npm i bootstrap@4.5.x
+npm i jquery@3.5.x
+npm i popper.js@1.16.x
+ls node_modules/bootstrap/dist/*
+ls node_modules/jquery/dist
+ls node_modules/popper.js/dist
 ```
 
 ```javascript
