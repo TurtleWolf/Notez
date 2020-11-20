@@ -589,16 +589,32 @@ null
 **_`Improving the Notes list on the front page`_**
 
 ```bash section 14
-code sample
-code sample
-code sample
+null
 ```
 
-#### **notez/namethisFILE**
+#### **notez/view/index.hbs**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+```hbs
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 btn-group-vertical" role="group">
+      {{#each notelist}}
+      <a class="btn btn-lg btn-block btn-outline-dark"
+         href="/notes/view?key={{ key }}">{{ title }}</a>
+      {{/each}}
+    </div>
+  </div>
+</div>
+```
+
+#### **notez/partials/header.hbs**
+
+```hbs
+{{!-- <h5>{{ title }}</h5> --}}
+...
+<span class="navbar-text col">
+    <h2>{{ title }}</h2>
+</span>
 ```
 
 ---
