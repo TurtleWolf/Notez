@@ -404,14 +404,38 @@ null;
 **_`Adding Bootstrap to the Notes application`_**
 
 ```bash section 6
-code sample
-code sample
-code sample
+mkdir public/assets
+mv public/images/ public/javascripts/ public/stylesheets/ public/assets/
 ```
 
+#### **notez/views/layout.hbs**
+
+```html
+<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/stylesheets/style.css" />
+...
+<script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/popper.js/popper.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+```
+
+#### **notez/app.mjs**
+
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+app.use(
+  '/assets/vendor/bootstrap',
+  express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist'))
+);
+app.use(
+  '/assets/vendor/jquery',
+  express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist'))
+);
+app.use(
+  '/assets/vendor/popper.js',
+  express.static(
+    path.join(__dirname, 'node_modules', 'popper.js', 'dist', 'umd')
+  )
+);
 ```
 
 ---
@@ -421,14 +445,11 @@ import * as notes from '../models/notes.mjs';
 **_`Alternative layout frameworks`_**
 
 ```bash section 7
-code sample
-code sample
-code sample
+null
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -438,14 +459,11 @@ import * as notes from '../models/notes.mjs';
 **_`Flexbox and CSS Grids`_**
 
 ```bash section 8
-code sample
-code sample
-code sample
+null
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -455,14 +473,11 @@ import * as notes from '../models/notes.mjs';
 **_`Mobile-first design for the Notes application`_**
 
 ```bash section 9
-code sample
-code sample
-code sample
+null
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -472,14 +487,11 @@ import * as notes from '../models/notes.mjs';
 **_`Laying the Bootstrap grid foundation`_**
 
 ```bash section 10
-code sample
-code sample
-code sample
+null
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -489,14 +501,13 @@ import * as notes from '../models/notes.mjs';
 **_`Responsive page structure for the Notes application`_**
 
 ```bash section 11
-code sample
-code sample
-code sample
+null
 ```
 
+#### **notez/views/layout.hbs**
+
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
@@ -506,14 +517,25 @@ import * as notes from '../models/notes.mjs';
 **_`Using icon libraries and improving visual appeal`_**
 
 ```bash section 12
-code sample
-code sample
-code sample
+npm i feather-icons@4.25.x
 ```
 
+#### **notez/app.mjs**
+
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+app.use(
+  '/assets/vendor/feather-icons',
+  express.static(path.join(__dirname, 'node_modules', 'feather-icons', 'dist'))
+);
+```
+
+#### **notez/views/layout.hbs**
+
+```javascript
+<script src="/assets/vendor/feather-icons/feather.js"></script>
+<script>
+  feather.replace();
+</script>
 ```
 
 ---
@@ -527,6 +549,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -545,6 +569,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -561,6 +587,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -579,6 +607,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -595,6 +625,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -613,6 +645,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -630,6 +664,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -646,6 +682,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -672,6 +710,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -688,6 +728,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -706,6 +748,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -722,6 +766,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -740,6 +786,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -756,6 +804,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -774,6 +824,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -790,6 +842,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -808,6 +862,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -824,6 +880,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -842,6 +900,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -858,6 +918,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -876,6 +938,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -892,6 +956,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -910,6 +976,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -926,6 +994,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -944,6 +1014,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -960,6 +1032,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -978,6 +1052,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -994,6 +1070,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1012,6 +1090,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1028,6 +1108,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1046,6 +1128,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1062,6 +1146,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1088,6 +1174,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1104,6 +1192,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1122,6 +1212,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1138,6 +1230,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1156,6 +1250,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1172,6 +1268,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1190,6 +1288,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1206,6 +1306,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1224,6 +1326,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1240,6 +1344,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1258,6 +1364,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1274,6 +1382,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1292,6 +1402,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1308,6 +1420,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1326,6 +1440,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1342,6 +1458,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1360,6 +1478,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1376,6 +1496,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1394,6 +1516,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1410,6 +1534,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1428,6 +1554,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1444,6 +1572,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1462,6 +1592,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1478,6 +1610,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1496,6 +1630,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1513,6 +1649,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1529,6 +1667,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1555,6 +1695,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1571,6 +1713,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1589,6 +1733,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1605,6 +1751,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1623,6 +1771,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1639,6 +1789,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1657,6 +1809,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1673,6 +1827,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1691,6 +1847,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1707,6 +1865,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1725,6 +1885,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1741,6 +1903,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1759,6 +1923,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1775,6 +1941,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1793,6 +1961,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1809,6 +1979,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1827,6 +1999,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1843,6 +2017,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1861,6 +2037,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1877,6 +2055,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1895,6 +2075,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1911,6 +2093,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1937,6 +2121,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1953,6 +2139,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -1971,6 +2159,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -1987,6 +2177,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2005,6 +2197,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2021,6 +2215,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2039,6 +2235,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2055,6 +2253,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2073,6 +2273,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2089,6 +2291,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2107,6 +2311,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2123,6 +2329,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2141,6 +2349,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2158,6 +2368,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2174,6 +2386,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2200,6 +2414,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2216,6 +2432,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2234,6 +2452,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2250,6 +2470,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2268,6 +2490,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2284,6 +2508,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2302,6 +2528,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2318,6 +2546,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2336,6 +2566,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2352,6 +2584,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2370,6 +2604,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2386,6 +2622,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2404,6 +2642,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2420,6 +2660,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2438,6 +2680,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2454,6 +2698,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2472,6 +2718,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2488,6 +2736,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2506,6 +2756,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2522,6 +2774,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2540,6 +2794,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2556,6 +2812,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2574,6 +2832,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2591,6 +2851,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2607,6 +2869,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2633,6 +2897,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2649,6 +2915,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2667,6 +2935,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2683,6 +2953,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2701,6 +2973,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2717,6 +2991,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2735,6 +3011,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2751,6 +3029,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2769,6 +3049,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2785,6 +3067,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2803,6 +3087,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2819,6 +3105,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2837,6 +3125,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2853,6 +3143,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2871,6 +3163,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2887,6 +3181,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2905,6 +3201,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2921,6 +3219,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2939,6 +3239,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2955,6 +3257,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -2973,6 +3277,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -2989,6 +3295,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3007,6 +3315,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3023,6 +3333,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3041,6 +3353,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3057,6 +3371,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3075,6 +3391,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3089,6 +3407,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3107,6 +3427,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3124,6 +3446,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3134,6 +3458,8 @@ import * as notes from '../models/notes.mjs';
 ### Ch12 section 31
 
 **_`Preparing the Docker Swarm before deploying the Notes stack`_**
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3158,6 +3484,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3174,6 +3502,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3192,6 +3522,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3208,6 +3540,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3226,6 +3560,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3242,6 +3578,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3260,6 +3598,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3277,6 +3617,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3293,6 +3635,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3319,6 +3663,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3335,6 +3681,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3353,6 +3701,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3369,6 +3719,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3387,6 +3739,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3403,6 +3757,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3421,6 +3777,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3437,6 +3795,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3455,6 +3815,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3471,6 +3833,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3489,6 +3853,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3505,6 +3871,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3523,6 +3891,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3539,6 +3909,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3557,6 +3929,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3573,6 +3947,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3591,6 +3967,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3607,6 +3985,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3625,6 +4005,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3641,6 +4023,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3659,6 +4043,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3675,6 +4061,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3693,6 +4081,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3709,6 +4099,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3727,6 +4119,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3743,6 +4137,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3761,6 +4157,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3777,6 +4175,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3803,6 +4203,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3819,6 +4221,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3837,6 +4241,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3853,6 +4259,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3871,6 +4279,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3887,6 +4297,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3905,6 +4317,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3921,6 +4335,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3939,6 +4355,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3955,6 +4373,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -3973,6 +4393,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -3989,6 +4411,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4007,6 +4431,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4023,6 +4449,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4041,6 +4469,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4057,6 +4487,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4075,6 +4507,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4091,6 +4525,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4109,6 +4545,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4123,6 +4561,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4141,6 +4581,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4157,6 +4599,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4175,6 +4619,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4191,6 +4637,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4209,6 +4657,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4225,6 +4675,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
@@ -4243,6 +4695,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4260,6 +4714,8 @@ code sample
 code sample
 ```
 
+#### **notez/namethisFILE**
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -4276,6 +4732,8 @@ code sample
 code sample
 code sample
 ```
+
+#### **notez/namethisFILE**
 
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
