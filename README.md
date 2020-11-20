@@ -52,6 +52,8 @@ npm i cross-env
 
 **_`Rewriting the generated router module as an ES6 module`_**
 
+<!-- favicon fails to respond early on, I think this is because of the conversion to ES6 modules -->
+
 ```javascript
 import * as notes from '../models/notes-memory.mjs';
 import * as notes from '../models/notes.mjs';
@@ -392,8 +394,7 @@ ls node_modules/popper.js/dist
 ```
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+null;
 ```
 
 ---
