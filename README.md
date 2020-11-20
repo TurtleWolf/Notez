@@ -624,16 +624,31 @@ null
 **_`Cleaning up the note viewing experience`_**
 
 ```bash section 15
-code sample
-code sample
-code sample
+null
 ```
 
-#### **notez/namethisFILE**
+#### **notez/noteview.hbs**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+```hbs
+<div class="container-fluid">
+    <div class="row"><div class="col-xs-12">
+        {{#if note}}<h3>{{ note.title }}</h3>{{/if}}
+        {{#if note}}<p>{{ note.body }}</p>{{/if}}
+        <p>Key: {{ notekey }}</p>
+    </div></div>
+    {{#if notekey }}
+      <div class="row"><div class="col-xs-12">
+      <div class="btn-group">
+        <a class="btn btn-outline-dark"
+           href="/notes/destroy?key={{notekey}}"
+           role="button">Delete</a>
+        <a class="btn btn-outline-dark"
+           href="/notes/edit?key={{notekey}}"
+           role="button">Edit</a>
+     </div>
+     </div></div>
+   {{/if}}
+</div>
 ```
 
 ---
