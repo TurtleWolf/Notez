@@ -708,16 +708,30 @@ null
 **_`Cleaning up the delete-note window`_**
 
 ```bash section 17
-code sample
-code sample
-code sample
+null
 ```
 
-#### **notez/namethisFILE**
+#### **notez/views/notedestroy.hbs**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+```hbs
+<form method='POST' action='/notes/destroy/confirm'>
+    <div class="container-fluid">
+        <input type='hidden' name='notekey' value='
+     {{#if note}}{{notekey}}{{/if}}'>
+        <p class="form-text">Delete {{note.title}}?</p>
+        <div class="btn-group">
+            <button type="submit" value='DELETE' class="btn btn-outline-dark">DELETE</button>
+            <a class="btn btn-outline-dark" href="/notes/view?key={{#if note}}{{notekey}}{{/if}}" role="button">
+                Cancel</a>
+        </div>
+    </div>
+</form>
+```
+
+#### **notez/routes/notes.mjs**
+
+```mjs
+`Delete ${note.title}`   ;
 ```
 
 ---
