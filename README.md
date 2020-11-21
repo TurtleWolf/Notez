@@ -788,19 +788,44 @@ btn-outline-light
 
 **_`Using third-party custom Bootstrap themes`_**
 
-```bash section 19
-code sample
-code sample
-code sample
+#### **notez/package.json**
+
+```json
+"scripts": {
+  "dl-slate": "mkdir -p slate && npm run dl-slate-css && npm run dl-slate-min-css",
+  "dl-slate-css": "wget https://bootswatch.com/4/slate/bootstrap.css -O slate/bootstrap.css",
+  "dl-slate-min-css": "wget https://bootswatch.com/4/slate/bootstrap.min.css -O slate/bootstrap.min.css"
+},
 ```
 
-#### **notez/namethisFILE**
+```bash section 19
+npm run dl-slate
+```
+
+#### **notez/app.mjs**
 
 ```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+// app.use('/assets/vendor/bootstrap', express.static(
+// path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
+// app.use('/assets/vendor/bootstrap', express.static(
+// path.join(__dirname, 'theme', 'dist')));
+app.use(
+  '/assets/vendor/bootstrap/js',
+  express.static(
+    path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')
+  )
+);
+app.use(
+  '/assets/vendor/bootstrap/css',
+  express.static(path.join(__dirname, 'slate'))
+);
 ```
 
+#### **notez/partials/header.hbs**
+
+```hbs
+<a class="nav-item nav-link btn btn-secondary col-auto" href='/notes/add'>Add Note</a>
+```
 ---
 
 ### CH06 section 20
