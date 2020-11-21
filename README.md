@@ -658,16 +658,47 @@ null
 **_`Cleaning up the add/edit note form`_**
 
 ```bash section 16
-code sample
-code sample
-code sample
+null
 ```
 
-#### **notez/namethisFILE**
+#### **notez/views/noteedit.hbs**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+```hbs
+<form method='POST' action='/notes/save'>
+    <div class="container-fluid">
+        {{#if docreate}}
+        <input type='hidden' name='docreate' value="create">
+        {{else}}
+        <input type='hidden' name='docreate' value="update">
+        {{/if}}
+        <div class="form-group row align-items-center">
+            <label for="notekey" class="col-1 col-form-label">Key</label>
+            {{#if docreate }}
+            <div class="col">
+                <input type='text' class="form-control" placeholder="note key" name='notekey' value='' />
+            </div>
+            {{else}}
+            {{#if note }}
+            <span class="input-group-text">{{notekey}}</span>
+            {{/if}}
+            <input type='hidden' name='notekey' value='{{#if note }}{{notekey}}{{/if}} ' />
+            {{/if}}
+        </div>
+
+        <div class="form-group row">
+            <label for="title" class="col-1 col-form-label">Title</label>
+            <div class="col">
+                <input type="text" class="form-control" id='title' name='title' placeholder="note title"
+                    value='{{#if note }}{{note.title}}{{/if}}'>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <textarea class="form-control" name='body' rows="5">{{#if note }}{{note.body}}{{/if}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+</form>
 ```
 
 ---
