@@ -731,7 +731,7 @@ null
 #### **notez/routes/notes.mjs**
 
 ```mjs
-`Delete ${note.title}`   ;
+`Delete ${note.title}`;
 ```
 
 ---
@@ -741,16 +741,45 @@ null
 **_`Customizing a Bootstrap build`_**
 
 ```bash section 18
-code sample
-code sample
-code sample
+mkdir theme
+cd theme
+npm init
+touch .gitignore
+touch _custom.scss
+npm run build
 ```
 
-#### **notez/namethisFILE**
+#### **notez/theme/package.json**
 
-```javascript
-import * as notes from '../models/notes-memory.mjs';
-import * as notes from '../models/notes.mjs';
+```json
+  "scripts": {
+    "download": "wget -O - https://github.com/twbs/bootstrap/archive/v4.5.0.tar.gz | tar xvfz -",
+    "postdownload": "cd bootstrap-4.5.0 && npm install",
+    "clean": "rm -rf bootstrap-4.5.0",
+    "prebuild": "cp _custom.scss bootstrap.scss bootstrap-4.5.0/scss",
+    "build": "cd bootstrap-4.5.0 && npm run dist",
+    "postbuild": "mkdir -p dist && cp -r bootstrap-4.5.0/dist .",
+    "watch": "cd bootstrap-4.5.0 && npm run watch"
+  },
+```
+
+#### **notez/theme/.gitignore**
+
+```.gitignore
+bootstrap-4.*
+```
+
+#### **notez/views/index.hbs**
+
+#### **notez/views/notedestroy.hbs**
+
+#### **notez/views/noteedit.hbs**
+
+#### **notez/views/noteview.hbs**
+
+```hbs
+btn-outline-light
+btn-outline-light
 ```
 
 ---
