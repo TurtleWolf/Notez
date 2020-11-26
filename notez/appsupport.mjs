@@ -82,3 +82,12 @@ export function basicErrorHandler(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 }
+
+process.on('uncaughtException', function (err) {
+    console.error(`I've crashed!!! - ${(err.stack || err)}`);
+});
+
+import * as util from 'util';
+process.on('unhandledRejection', (reason, p) => {
+    console.error(`Unhandled Rejection at: ${util.inspect(p)} reason: ${reason}`);
+});
