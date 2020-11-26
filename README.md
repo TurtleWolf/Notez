@@ -1211,7 +1211,9 @@ export default class InMemoryNotesStore extends AbstractNotesStore { ... }
 import { useModel as useNotesModel } from './models/notes-store.mjs';
 useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : 'memory')
   .then((store) => {})
-  .then(store => { debug(`Using NotesStore ${store}`); })
+  .then((store) => {
+    debug(`Using NotesStore ${store}`);
+  })
   .catch((error) => {
     onError({ code: 'ENOTESSTORE', error });
   });
@@ -1436,6 +1438,10 @@ null;
 
 #### **notez/models/schema-sqlite3.sql**
 
+```bash section 14
+touch models/schema-sqlite3.sql
+```
+
 ```sql
 CREATE TABLE IF NOT EXISTS notes (
     notekey VARCHAR(255),
@@ -1458,6 +1464,7 @@ sqlite3 chap07.sqlite3
 
 ```bash section 14
 npm run sqlite3-setup
+ls -l chap07.sqlite3
 ```
 
 ---
