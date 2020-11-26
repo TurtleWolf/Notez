@@ -1,6 +1,7 @@
 # notez
 notes-fs-data/
 notes.level/
+*.sqlite3
 # Logs
 logs
 *.log
