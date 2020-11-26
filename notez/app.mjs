@@ -15,11 +15,17 @@ const __dirname = approotdir;
 import {
   normalizePort, onError, onListening, handle404, basicErrorHandler
 } from './appsupport.mjs';
-import { InMemoryNotesStore } from './models/notes-memory.mjs';
-export const NotesStore = new InMemoryNotesStore();
+// import { InMemoryNotesStore } from './models/notes-memory.mjs';
+// export const NotesStore = new InMemoryNotesStore();
 
 import { router as indexRouter } from './routes/index.mjs';
 import { router as notesRouter } from './routes/notes.mjs';
+
+import { useModel as useNotesModel } from './models/notes-store.mjs';
+useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : "memory")
+  .then(store => { })
+  // .then(store => { debug(`Using NotesStore ${store}`); })
+  .catch(error => { onError({ code: 'ENOTESSTORE', error }); });
 
 export const app = express();
 

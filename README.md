@@ -1166,7 +1166,7 @@ async function crupdate(key, title, body) {
 **_`Dynamically importing ES6 modules`_**
 
 ```bash section 9
-null
+touch models/notes-store.mjs
 ```
 
 #### **notez/models/notes-store.mjs**
@@ -1204,21 +1204,53 @@ export default class InMemoryNotesStore extends AbstractNotesStore { ... }
 ```javascript
 // import { InMemoryNotesStore } from './models/notes-memory.mjs';
 // export const NotesStore = new InMemoryNotesStore();
+
+// import { router as indexRouter } from './routes/index.mjs';
+// import { router as notesRouter } from './routes/notes.mjs';
+
 import { useModel as useNotesModel } from './models/notes-store.mjs';
-useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL :
-    “memory”)
-.then(store => {  })
-.catch(error => { onError({ code: 'ENOTESSTORE', error }); });
+useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : 'memory')
+  .then((store) => {})
+  // .then(store => { debug(`Using NotesStore ${store}`); })
+  .catch((error) => {
+    onError({ code: 'ENOTESSTORE', error });
+  });
 ```
 
 #### **notez/appsupport.mjs**
 
 ```javascript
- case 'ENOTESSTORE':
-    console.error(`Notes data store initialization failure because `,
-     error.error);
-    process.exit(1);
-    break;
+export function onError(error) {
+  // dbgerror(error);
+  // if (error.syscall !== 'listen') {
+  //     throw error;
+  // }
+
+  // const bind = typeof port === 'string'
+  //     ? 'Pipe ' + port
+  //     : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    // case 'EACCES':
+    //     console.error(`${bind} requires elevated privileges`);
+    //     process.exit(1);
+    //     break;
+    // case 'EADDRINUSE':
+    //     console.error(`${bind} is already in use`);
+    //     process.exit(1);
+    //     break;
+    case 'ENOTESSTORE':
+      console.error(
+        `Notes data store initialization failure because `,
+        error.error
+      );
+      process.exit(1);
+      break;
+    // default:
+    //     throw error;
+  }
+}
 ```
 
 #### **notez/routes/index.mjs & routes/notes.mjs**
