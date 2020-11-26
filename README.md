@@ -1389,10 +1389,6 @@ npm run level-start
 
 **_`Closing database connections when closing the process`_**
 
-```bash section 12
-null
-```
-
 #### **notez/appsupport.mjs**
 
 ```javascript
@@ -1412,6 +1408,10 @@ process.on('SIGHUP', catchProcessDeath);
 process.on('exit', () => {
   debug('exiting...');
 });
+```
+
+```bash section 12
+npm run level-start
 ```
 
 ---
