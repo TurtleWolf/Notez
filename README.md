@@ -1211,7 +1211,7 @@ export default class InMemoryNotesStore extends AbstractNotesStore { ... }
 import { useModel as useNotesModel } from './models/notes-store.mjs';
 useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : 'memory')
   .then((store) => {})
-  // .then(store => { debug(`Using NotesStore ${store}`); })
+  .then(store => { debug(`Using NotesStore ${store}`); })
   .catch((error) => {
     onError({ code: 'ENOTESSTORE', error });
   });
@@ -1289,6 +1289,7 @@ DEBUG=notez:* npm run fs-start
 
 ```bash section 11
 npm i level@6.x
+touch models/notes-level.mjs
 ```
 
 #### **notez/models/notes-level.mjs**
@@ -1376,6 +1377,10 @@ async function crupdate(key, title, body) {
 {
   "level-start": "cross-env DEBUG=notes:* PORT=3000 NOTES_MODEL=level node ./app.mjs"
 }
+```
+
+```bash section 11
+npm run level-start
 ```
 
 ---
