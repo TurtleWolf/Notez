@@ -930,14 +930,14 @@ if (process.env.REQUEST_LOG_FILE) {
 
 ```json
 {
-    "scripts": {
+  "scripts": {
     "start": "cross-env REQUEST_LOG_FILE=log.txt REQUEST_LOG_FORMAT=common DEBUG=notez:* node ./app.mjs",
     "server1": "cross-env REQUEST_LOG_FILE=log.txt REQUEST_LOG_FORMAT=common DEBUG=notez:* PORT=3001 node ./app.mjs",
-    "server2": "cross-env REQUEST_LOG_FILE=log.txt REQUEST_LOG_FORMAT=common DEBUG=notez:* PORT=3002 node ./app.mjs",
+    "server2": "cross-env REQUEST_LOG_FILE=log.txt REQUEST_LOG_FORMAT=common DEBUG=notez:* PORT=3002 node ./app.mjs"
     // "dl-slate": "mkdir -p slate && npm run dl-slate-css && npm run dl-slate-min-css",
     // "dl-slate-css": "wget https://bootswatch.com/4/slate/bootstrap.css -O slate/bootstrap.css",
     // "dl-slate-min-css": "wget https://bootswatch.com/4/slate/bootstrap.min.css -O slate/bootstrap.min.css"
-  },
+  }
 }
 ```
 
@@ -954,6 +954,11 @@ null
 #### **notez/app.mjs**
 
 ```javascript
+// ...
+import { default as DBG } from 'debug';
+const debug = DBG('notes:debug');
+const dbgerror = DBG('notes:error');
+// ...
 server.on('request', (req, res) => {
   debug(`${new Date().toISOString()} request ${req.method} ${req.url}`);
 });
@@ -962,18 +967,23 @@ server.on('request', (req, res) => {
 #### **notez/appsupport.mjs**
 
 ```javascript
-export function onError(error) {
-   dbgerror(error);
-   ..
-}
+import { default as DBG } from 'debug';
+const debug = DBG('notes:debug');
+const dbgerror = DBG('notes:error');
+// ...
+// export function onError(error) {
+dbgerror(error);
+// if (error.syscall !== 'listen') {
+// throw error;
+// }
 
-export function onListening() {
-    const addr = server.address();
-    const bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
-    debug(`Listening on ${bind}`);
-}
+// export function onListening() {
+//     const addr = server.address();
+//     const bind = typeof addr === 'string'
+//         ? 'pipe ' + addr
+//         : 'port ' + addr.port;
+debug(`Listening on ${bind}`);
+// }
 ```
 
 ---

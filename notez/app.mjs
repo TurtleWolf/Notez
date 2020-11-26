@@ -4,6 +4,9 @@ import * as path from 'path';
 // import * as favicon from'serve-favicon';
 import { default as logger } from 'morgan';
 import { default as rfs } from 'rotating-file-stream';
+import { default as DBG } from 'debug';
+const debug = DBG('notez:debug');
+const dbgerror = DBG('notez:error');
 import { default as cookieParser } from 'cookie-parser';
 import { default as bodyParser } from 'body-parser';
 import * as http from 'http';
@@ -71,5 +74,8 @@ app.set('port', port);
 export const server = http.createServer(app);
 
 server.listen(port);
+server.on('request', (req, res) => {
+  debug(`${new Date().toISOString()} request ${req.method} ${req.url}`);
+});
 server.on('error', onError);
 server.on('listening', onListening);
