@@ -1033,31 +1033,50 @@ process.on('unhandledRejection', (reason, p) => {
 
 ```bash section 8
 npm i fs-extra
+touch models/notes-fs.mjs
 ```
 
 #### **notez/models/Notes.mjs**
 
 ```javascript
-    get JSON() {
-        return JSON.stringify({
-            key: this.key, title: this.title, body: this.body
-        });
-    }
+export class Note {
+  // constructor(key, title, body) {
+  //     this[_note_key] = key;
+  //     this[_note_title] = title;
+  //     this[_note_body] = body;
+  // }
 
-    static fromJSON(json) {
-        const data = JSON.parse(json);
-        if (typeof data !== 'object'
-          || !data.hasOwnProperty('key')
-          || typeof data.key !== 'string'
-          || !data.hasOwnProperty('title')
-          || typeof data.title !== 'string'
-          || !data.hasOwnProperty('body')
-          || typeof data.body !== 'string') {
-            throw new Error(`Not a Note: ${json}`);
-        }
-        const note = new Note(data.key, data.title, data.body);
-        return note;
+  // get key() { return this[_note_key]; }
+  // get title() { return this[_note_title]; }
+  // set title(newTitle) { this[_note_title] = newTitle; }
+  // get body() { return this[_note_body]; }
+  // set body(newBody) { this[_note_body] = newBody; }
+
+  get JSON() {
+    return JSON.stringify({
+      key: this.key,
+      title: this.title,
+      body: this.body,
+    });
+  }
+
+  static fromJSON(json) {
+    const data = JSON.parse(json);
+    if (
+      typeof data !== 'object' ||
+      !data.hasOwnProperty('key') ||
+      typeof data.key !== 'string' ||
+      !data.hasOwnProperty('title') ||
+      typeof data.title !== 'string' ||
+      !data.hasOwnProperty('body') ||
+      typeof data.body !== 'string'
+    ) {
+      throw new Error(`Not a Note: ${json}`);
     }
+    const note = new Note(data.key, data.title, data.body);
+    return note;
+  }
+}
 ```
 
 #### **notez/models/notes-fs.mjs**
@@ -1076,6 +1095,7 @@ const error = DBG('notes:error-fs');
 export default class FSNotesStore extends AbstractNotesStore {
 
   async close() { }
+
   async update(key, title, body) { return crupdate(key, title, body);
    }
   async create(key, title, body) { return crupdate(key, title, body);
