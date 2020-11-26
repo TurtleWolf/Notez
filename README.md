@@ -1474,7 +1474,7 @@ ls -l chap07.sqlite3
 **_`The SQLite3 model code`_**
 
 ```bash section 15
-null
+touch models/notes-sqlite3.mjs
 ```
 
 #### **notez/models/notes-sqlite3.mjs**
