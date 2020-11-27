@@ -1656,6 +1656,12 @@ null;
 
 **_`Configuring Sequelize and connecting to a database`_**
 
+```bash section 18
+touch models/sequlz.mjs
+touch models/sequelize-sqlite.yaml
+touch models/sequelize-mysql.yaml
+```
+
 #### **notez/models/sequlz.mjs**
 
 ```javascript
