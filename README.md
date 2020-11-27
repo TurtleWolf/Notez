@@ -1764,7 +1764,7 @@ npm i mysql@2.x
 **_`Creating a Sequelize model for the Notes application`_**
 
 ```bash section 19
-null
+touch models/notes-sequelize.mjs
 ```
 
 #### **notez/models/notes-sequelize.mjs**
