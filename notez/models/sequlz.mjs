@@ -6,10 +6,8 @@ let sequlz;
 
 export async function connectDB() {
     if (typeof sequlz === 'undefined') {
-        const yamltext = await fs.readFile(process.env.SEQUELIZE_CONNECT,
-            'utf8');
+        const yamltext = await fs.readFile(process.env.SEQUELIZE_CONNECT, 'utf8');
         const params = jsyaml.safeLoad(yamltext, 'utf8');
-
         if (typeof process.env.SEQUELIZE_DBNAME !== 'undefined'
             && process.env.SEQUELIZE_DBNAME !== '') {
             params.dbname = process.env.SEQUELIZE_DBNAME;
@@ -34,7 +32,6 @@ export async function connectDB() {
             && process.env.SEQUELIZE_DBDIALECT !== '') {
             params.params.dialect = process.env.SEQUELIZE_DBDIALECT;
         }
-
         sequlz = new Sequelize(params.dbname,
             params.username, params.password,
             params.params);

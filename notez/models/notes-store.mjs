@@ -1,3 +1,4 @@
+
 import { default as DBG } from 'debug';
 const debug = DBG('notez:notes-store');
 const error = DBG('notez:error-store');
@@ -13,8 +14,7 @@ export async function useModel(model) {
         _NotesStore = new NotesStoreClass();
         return _NotesStore;
     } catch (err) {
-        throw new Error(`No recognized NotesStore in ${model} because
-          ${err}`);
+        throw new Error(`No recognized NotesStore in ${model} because ${err}`);
     }
 }
 
