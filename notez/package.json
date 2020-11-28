@@ -17,6 +17,9 @@
     "sequelize-start": "cross-env DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize node ./app.mjs",
     "sequelize-server1": "cross-env SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize PORT=3001 node ./app.mjs",
     "sequelize-server2": "cross-env SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize PORT=3002 node ./a[[.mjs",
+    "mongodb-start": "cross-env DEBUG=notez:* MONGO_URL=mongodb://localhost/ MONGO_DBNAME=chap07 NOTES_MODEL=mongodb node ./app.mjs",
+    "mongodb-server1": "cross-env DEBUG=notez:* MONGO_URL=mongodb://localhost/ MONGO_DBNAME=chap07 NOTES_MODEL=mongodb PORT=3001 node ./app.mjs",
+    "mongodb-server2": "cross-env DEBUG=notez:* MONGO_URL=mongodb://localhost/ MONGO_DBNAME=chap07 NOTES_MODEL=mongodb PORT=3002 node ./app.mjs",
     "dl-slate": "mkdir -p slate && npm run dl-slate-css && npm run dl-slate-min-css",
     "dl-slate-css": "wget https://bootswatch.com/4/slate/bootstrap.css -O slate/bootstrap.css",
     "dl-slate-min-css": "wget https://bootswatch.com/4/slate/bootstrap.min.css -O slate/bootstrap.min.css"

@@ -2036,6 +2036,9 @@ export default class MongoDBNotesStore extends AbstractNotesStore {
 
 ```bash section 23
 npm run mongodb-start
+```
+
+```bash section 23
 mongo chap07
 db.notes.find()
 ```
