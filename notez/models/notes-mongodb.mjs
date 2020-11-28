@@ -3,7 +3,7 @@ import mongodb from 'mongodb';
 const MongoClient = mongodb.MongoClient;
 import DBG from 'debug';
 const debug = DBG('notez:notes-mongodb');
-const error = DBG('z:error-mongodb');
+const error = DBG('notez:error-mongodb');
 
 var client;
 

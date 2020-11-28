@@ -5,7 +5,7 @@ const notes = [];
 
 export default class InMemoryNotesStore extends AbstractNotesStore {
 
-    // async close() { }
+    async close() { }
 
     async update(key, title, body) {
         notes[key] = new Note(key, title, body);

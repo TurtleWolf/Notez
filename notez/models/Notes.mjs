@@ -39,7 +39,8 @@ export class Note {
 }
 
 export class AbstractNotesStore {
-    // async close() { }
+    static store() { }
+    async close() { } // TBD document in book
     async update(key, title, body) { }
     async create(key, title, body) { }
     async read(key) { }

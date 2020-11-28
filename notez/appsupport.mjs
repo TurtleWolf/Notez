@@ -1,4 +1,4 @@
-import { port } from './app.mjs';
+import { server, port } from './app.mjs';
 import { default as DBG } from 'debug';
 const debug = DBG('notez:debug');
 const dbgerror = DBG('notez:error');
@@ -44,13 +44,12 @@ export function onError(error) {
             console.error(`${bind} is already in use`);
             process.exit(1);
             break;
-        // case 'ELOGFILEROTATOR':
-        //     console.error(`Log file initialization failure because `, error.error);
-        //     process.exit(1);
-        //     break;
+        case 'ELOGFILEROTATOR':
+            console.error(`Log file initialization failure because `, error.error);
+            process.exit(1);
+            break;
         case 'ENOTESSTORE':
-            console.error(`Notes data store initialization failure because `,
-                error.error);
+            console.error(`Notes data store initialization failure because `, error.error);
             process.exit(1);
             break;
         default:
@@ -61,7 +60,7 @@ export function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-import { server } from './app.mjs';
+// import { server } from './app.mjs';
 export function onListening() {
     const addr = server.address();
     const bind = typeof addr === 'string'
@@ -81,6 +80,7 @@ export function basicErrorHandler(err, req, res, next) {
     // Defer to built-in error handler if headersSent
     // See: http://expressjs.com/en/guide/error-handling.html
     if (res.headersSent) {
+        debug(`basicErrorHandler HEADERS SENT error ${util.inspect(err)}`);
         return next(err);
     }
     // set locals, only providing error in development

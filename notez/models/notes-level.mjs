@@ -33,9 +33,11 @@ export default class LevelNotesStore extends AbstractNotesStore {
     }
 
     async read(key) {
+        debug(`reading ${key}`);
         const db = await connectDB();
         const note = Note.fromJSON(await db.get(key));
-        return note;
+        debug(`read ${key} => ${util.inspect(note)}`);
+        return note; // new Note(note.key, note.title, note.body);
     }
 
     async destroy(key) {
@@ -52,25 +54,29 @@ export default class LevelNotesStore extends AbstractNotesStore {
                 .on('error', err => reject(err))
                 .on('end', () => resolve(keyz));
         });
+        debug(`keylist returning ${util.inspect(keyz)}`);
         return keyz;
     }
 
     async count() {
         const db = await connectDB();
-        var total = 0;
+        let total = 0;
         await new Promise((resolve, reject) => {
             db.createKeyStream()
                 .on('data', data => total++)
                 .on('error', err => reject(err))
                 .on('end', () => resolve(total));
         });
+        debug(`count returning ${util.inspect(total)}`);
         return total;
     }
 }
 
 async function crupdate(key, title, body) {
+    debug(`crupdate ${key} ${title} ${body}`);
     const db = await connectDB();
-    const note = new Note(key, title, body);
+    let note = new Note(key, title, body);
     await db.put(key, note.JSON);
+    debug(`crupdate saved ${util.inspect(note)}`);
     return note;
 }
