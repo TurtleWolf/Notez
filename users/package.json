@@ -2,8 +2,9 @@
   "name": "users",
   "version": "1.0.0",
   "description": "User Authentication Service",
-  "main": "index.js",
+  "main": "user-server.mjs",
   "scripts": {
+    "start": "cross-env DEBUG=users:* PORT=5858 SEQUELIZE_CONNECT=sequelize-sqlite.yaml node ./user-server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

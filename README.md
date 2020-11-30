@@ -2264,7 +2264,7 @@ params:
 **_`Creating a REST server for user information`_**
 
 ```bash section 4
-null
+touch user-server.mjs
 ```
 
 #### **users/package.json**
