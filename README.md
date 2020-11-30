@@ -3021,6 +3021,7 @@ export async function listUsers() {
 ```bash section 13
 npm i passport@^0.4.x passport-local@1.x
 npm i express-session@1.17.x session-file-store@1.4.x
+touch routes/users.mjs
 ```
 
 #### **users/routes/users.mjs**
@@ -3038,8 +3039,8 @@ import { sessionCookieName } from '../app.mjs';
 export const router = express.Router();
 
 import DBG from 'debug';
-const debug = DBG('notes:router-users');
-const error = DBG('notes:error-users');
+const debug = DBG('notez:router-users');
+const error = DBG('notez:error-users');
 
 export function initPassport(app) {
   app.use(passport.initialize());
