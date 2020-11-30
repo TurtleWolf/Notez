@@ -3130,7 +3130,8 @@ passport.deserializeUser(async (username, done) => {
 #### **notez/app.mjs**
 
 ```javascript
-// ...
+// import { router as indexRouter } from './routes/index.mjs';
+// import { router as notesRouter } from './routes/notes.mjs';
 import { router as usersRouter, initPassport } from './routes/users.mjs';
 
 import session from 'express-session';
@@ -3146,7 +3147,9 @@ const FileStore = sessionFileStore(session);
 // import sessionMemoryStore from 'memorystore';
 // const MemoryStore = sessionMemoryStore(session);
 export const sessionCookieName = 'notescookie.sid';
+
 // ...
+// app.use(cookieParser());
 app.use(
   session({
     // Use the appropriate session store class
@@ -3160,6 +3163,11 @@ app.use(
   })
 );
 initPassport(app);
+
+// ...
+// app.use('/', indexRouter);
+// app.use('/notes', notesRouter);
+app.use('/users', usersRouter);
 ```
 
 ---

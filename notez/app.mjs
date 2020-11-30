@@ -20,6 +20,21 @@ import {
 
 import { router as indexRouter } from './routes/index.mjs';
 import { router as notesRouter } from './routes/notes.mjs';
+import { router as usersRouter, initPassport } from './routes/users.mjs';
+
+import session from 'express-session';
+// For compatible session store packages, see:
+//      http://expressjs.com/en/resources/middleware/session.html#compatible-session-stores
+// Uncomment this for session-file-store
+import sessionFileStore from 'session-file-store';
+const FileStore = sessionFileStore(session);
+// Uncomment this for connect-loki
+// import sessionLokiStore from 'connect-loki';
+// const LokiStore = sessionLokiStore(session);
+// Uncomment this for memorystore
+// import sessionMemoryStore from 'memorystore';
+// const MemoryStore = sessionMemoryStore(session);
+export const sessionCookieName = 'notescookie.sid';
 
 import { useModel as useNotesModel } from './models/notes-store.mjs';
 useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : "memory")
@@ -49,6 +64,19 @@ if (process.env.REQUEST_LOG_FILE) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(
+  session({
+    // Use the appropriate session store class
+    // store: new MemoryStore({}),
+    // store: new LokiStore({}),
+    store: new FileStore({ path: 'sessions' }),
+    secret: 'keyboard mouse',
+    resave: true,
+    saveUninitialized: true,
+    name: sessionCookieName,
+  })
+);
+initPassport(app);
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/assets/vendor/bootstrap', express.static(
 // path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
@@ -66,7 +94,7 @@ app.use('/assets/vendor/feather-icons', express.static(
   path.join(__dirname, 'node_modules', 'feather-icons', 'dist')));
 // Router function lists
 app.use('/', indexRouter);
-// app.use('/users', usersRouter);
+app.use('/users', usersRouter);
 app.use('/notes', notesRouter);
 
 // error handlers
