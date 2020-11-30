@@ -63,6 +63,26 @@ server.post('/create-user', async (req, res, next) => {
     }
 });
 
+// Update an existing user record
+server.post('/update-user/:username', async (req, res, next) => {
+    try {
+        log(`update-user params ${util.inspect(req.params)}`);
+        await connectDB();
+        let toupdate = userParams(req);
+        log(`updating ${util.inspect(toupdate)}`);
+        await SQUser.update(toupdate, { where: { username: req.params.username } });
+        const result = await findOneUser(req.params.username);
+        log('updated ' + util.inspect(result));
+        res.contentType = 'json';
+        res.send(result);
+        next(false);
+    } catch (err) {
+        res.send(500, err);
+        error(`/update-user/${req.params.username} ${err.stack}`);
+        next(false);
+    }
+});
+
 // Find a user, if not found create one given profile information
 server.post('/find-or-create', async (req, res, next) => {
     try {

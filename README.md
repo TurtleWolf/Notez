@@ -2645,6 +2645,12 @@ node cli.mjs list-users
 #### **users/user-server.mjs**
 
 ```javascript
+// ...
+// Create a user record
+// server.post('/create-user', async (req, res, next) => {
+// ...
+// }
+
 // Update an existing user record
 server.post('/update-user/:username', async (req, res, next) => {
   try {
@@ -2669,6 +2675,10 @@ server.post('/update-user/:username', async (req, res, next) => {
 #### **users/cli.mjs**
 
 ```javascript
+// program
+//     .command('find-or-create <username>')
+// ...
+
 program
  .command('update <username>')
  .description('Add a user to the user server')
