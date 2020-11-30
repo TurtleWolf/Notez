@@ -119,6 +119,27 @@ server.get('/find/:username', async (req, res, next) => {
     }
 });
 
+// Delete/destroy an existing user record
+server.del('/destroy/:username', async (req, res, next) => {
+    try {
+        await connectDB();
+        const user = await SQUser.findOne({ where: { username: req.params.username } });
+        if (!user) {
+            res.send(404,
+                new Error(`Did not find requested ${req.params.username} to delete`));
+        } else {
+            user.destroy();
+            res.contentType = 'json';
+            res.send({});
+        }
+        next(false);
+    } catch (err) {
+        res.send(500, err);
+        error(`/destroy/${req.params.username} ${err.stack}`);
+        next(false);
+    }
+});
+
 // List users
 server.get('/list', async (req, res, next) => {
     try {

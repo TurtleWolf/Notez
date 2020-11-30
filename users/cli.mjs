@@ -103,8 +103,7 @@ program
     .command('update <username>')
     .description('Add a user to the user server')
     .option('--password <password>', 'Password for new user')
-    .option('--family-name <familyName>',
-        'Family name, or last name, of the user')
+    .option('--family-name <familyName>', 'Family name, or last name, of the user')
     .option('--given-name <givenName>', 'Given name, or first name, of the user')
     .option('--middle-name <middleName>', 'Middle name of the user')
     .option('--email <email>', 'Email address for the user')
@@ -123,6 +122,16 @@ program
                 if (err) console.error(err.stack);
                 else console.log('Updated ' + util.inspect(obj));
             });
+    });
+
+program
+    .command('destroy <username>')
+    .description('Destroy a user on the user server')
+    .action((username, cmdObj) => {
+        client(program).del(`/destroy/${username}`, (err, req, res, obj) => {
+            if (err) console.error(err.stack);
+            else console.log('Deleted - result= ' + util.inspect(obj));
+        });
     });
 
 program

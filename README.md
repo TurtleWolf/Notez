@@ -2680,31 +2680,29 @@ server.post('/update-user/:username', async (req, res, next) => {
 // ...
 
 program
- .command('update <username>')
- .description('Add a user to the user server')
- .option('--password <password>', 'Password for new user')
- .option('--family-name <familyName>',
-                 'Family name, or last name, of the user')
- .option('--given-name <givenName>', 'Given name, or first name,
-          of the user')
- .option('--middle-name <middleName>', 'Middle name of the user')
- .option('--email <email>', 'Email address for the user')
- .action((username, cmdObj) => {
-   const topost = {
-     username, password: cmdObj.password,
-     familyName: cmdObj.familyName,
-     givenName: cmdObj.givenName,
-     middleName: cmdObj.middleName,
-     emails: [], photos: []
-   };
-   if (typeof cmdObj.email !== 'undefined')
-    topost.emails.push(cmdObj.email);
-   client(program).post(`/update-user/${username}`, topost,
-                  (err, req, res, obj) => {
-     if (err) console.error(err.stack);
-     else console.log('Updated '+ util.inspect(obj));
-   });
- });
+    .command('update <username>')
+    .description('Add a user to the user server')
+    .option('--password <password>', 'Password for new user')
+    .option('--family-name <familyName>', 'Family name, or last name, of the user')
+    .option('--given-name <givenName>', 'Given name, or first name, of the user')
+    .option('--middle-name <middleName>', 'Middle name of the user')
+    .option('--email <email>', 'Email address for the user')
+    .action((username, cmdObj) => {
+        const topost = {
+            username, password: cmdObj.password,
+            familyName: cmdObj.familyName,
+            givenName: cmdObj.givenName,
+            middleName: cmdObj.middleName,
+            emails: [], photos: []
+        };
+        if (typeof cmdObj.email !== 'undefined')
+            topost.emails.push(cmdObj.email);
+        client(program).post(`/update-user/${username}`, topost,
+            (err, req, res, obj) => {
+                if (err) console.error(err.stack);
+                else console.log('Updated ' + util.inspect(obj));
+            });
+    });
 ```
 
 ```bash section 8
@@ -2720,49 +2718,54 @@ node cli.mjs update --password fooooey --family-name Smith --given-name John --m
 #### **users/user-server.mjs**
 
 ```javascript
+// Find the user data (does not return password)
+// server.get('/find/:username', async (req, res, next) => {
+// ...
+
 // Delete/destroy an existing user record
 server.del('/destroy/:username', async (req, res, next) => {
-  try {
-    await connectDB();
-    const user = await SQUser.findOne({
-      where: { username: req.params.username },
-    });
-    if (!user) {
-      res.send(
-        404,
-        new Error(`Did not find requested ${req.params.username} 
-         to delete`)
-      );
-    } else {
-      user.destroy();
-      res.contentType = 'json';
-      res.send({});
+    try {
+        await connectDB();
+        const user = await SQUser.findOne({ where: { username: req.params.username } });
+        if (!user) {
+            res.send(404,
+                new Error(`Did not find requested ${req.params.username} to delete`));
+        } else {
+            user.destroy();
+            res.contentType = 'json';
+            res.send({});
+        }
+        next(false);
+    } catch (err) {
+        res.send(500, err);
+        error(`/destroy/${req.params.username} ${err.stack}`);
+        next(false);
     }
-    next(false);
-  } catch (err) {
-    res.send(500, err);
-    next(false);
-  }
 });
 ```
 
 #### **users/cli.mjs**
 
 ```javascript
+// program
+//     .command('update <username>')
+// ...
+
 program
-  .command('destroy <username>')
-  .description('Destroy a user on the user server')
-  .action((username, cmdObj) => {
-    client(program).del(`/destroy/${username}`, (err, req, res, obj) => {
-      if (err) console.error(err.stack);
-      else console.log('Deleted - result= ' + util.inspect(obj));
+    .command('destroy <username>')
+    .description('Destroy a user on the user server')
+    .action((username, cmdObj) => {
+        client(program).del(`/destroy/${username}`, 
+        (err, req, res, obj) => {
+            if (err) console.error(err.stack);
+            else console.log('Deleted - result= '+ util.inspect(obj));
+        });
     });
-  });
 ```
 
 ```bash section 9
 node cli.mjs destroy snuffy-smith
-node cli.mjs destroy snuffy-smith
+node cli.mjs find snuffy-smith
 ```
 
 ---
