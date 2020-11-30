@@ -3306,90 +3306,88 @@ router.post('/destroy/confirm', ensureAuthenticated, async (req, res, next) => {
 **_`Viewing template changes supporting login/logout`_**
 
 ```bash section 17
-null
+touch views/login.hbs
+touch partials/not-logged-in.hbs
 ```
 
 #### **notez/partials/header.hbs**
 
 ```hbs
-<!-- ... -->
-<!-- make the following additions -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" href='/'><i data-feather="home"></i></a>
-  <button class="navbar-toggler" type="button"
-         data-toggle="collapse" data-target="#navbarLogIn"
-         aria-controls="navbarLogIn"
-         aria-expanded="false"
-         aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon"></span>
-  </button>
-  {{#if user}}
-  <div class="collapse navbar-collapse" id="navbarLogIn">
-     <span class="navbar-text text-dark col">{{ title }}</span>
-     <a class="btn btn-dark col-auto" href="/users/logout">
-            Log Out <span class="badge badge-light">{{ user.username
+<!-- <header class="page-header">
+    {{!-- <h5>{{ title }}</h5> --}}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href='/'><i data-feather="home"></i></a> -->
+        <button
+        <!-- class="navbar-toggler" type="button" data-toggle="collapse" -->
+        data-target="#navbarLogIn"
+        aria-controls="navbarLogIn"
+        <!-- aria-expanded="false" aria-label="Toggle navigation"> -->
+            <!-- <span class="navbar-toggler-icon"></span>
+        </button> -->
+        {{#if user}}
+        <div class="collapse navbar-collapse" id="navbarLogIn">
+            <span class="navbar-text text-dark col">{{ title }}</span>
+            <a class="btn btn-dark col-auto" href="/users/logout">
+                Log Out <span class="badge badge-light">{{ user.username
                 }}
-     </span></a>
-     <a class="nav-item nav-link btn btn-dark col-auto"
-         href='/notes/add'>ADD Note</a>
-  </div>
-  {{else}}
-  <div class="collapse navbar-collapse" id="navbarLogIn">
-     <a class="btn btn-primary" href="/users/login">Log in</a>
-  </div>
-  {{/if}}
-</nav>
-<!-- ... -->
+                </span></a>
+            <a class="nav-item nav-link btn btn-dark col-auto" href='/notes/add'>ADD Note</a>
+        </div>
+        {{else}}
+        <div class="collapse navbar-collapse" id="navbarLogIn">
+            <a class="btn btn-primary" href="/users/login">Log in</a>
+        </div>
+        {{/if}}
+    <!-- </nav>
+</header> -->
 ```
 
 #### **notez/views/login.hbs**
 
 ```hbs
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-12 btn-group-vertical" role="group">
+    <div class="row">
+        <div class="col-12 btn-group-vertical" role="group">
 
-        <form method='POST' action='/users/login'>
-        <div class="form-group">
-        <label for="username">User name:</label>
-        <input class="form-control" type='text' id='username'
-               name='username' value='' placeholder='User Name'/>
-        </div>
-        <div class="form-group">
-        <label for="password">Password:</label>
-        <input class="form-control" type='password' id='password'
-               name='password' value='' placeholder='Password'/>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+            <form method='POST' action='/users/login'>
+                <div class="form-group">
+                    <label for="username">User name:</label>
+                    <input class="form-control" type='text' id='username' name='username' value=''
+                        placeholder='User Name' />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input class="form-control" type='password' id='password' name='password' value=''
+                        placeholder='Password' />
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
 
+        </div>
     </div>
-  </div>
 </div>
 ```
 
 #### **notez/views/notedestroy.hbs**
 
 ```hbs
-<form method='POST' action='/notes/destroy/confirm'>
-<div class="container-fluid">
-  {{#if user}}
-  <input type='hidden' name='notekey' value='{{#if
-    note}}{{notekey}}{{/if}}'>
- <p class="form-text">Delete {{note.title}}?</p>
+<!-- <form method='POST' action='/notes/destroy/confirm'>
+    <div class="container-fluid"> -->
 
- <div class="btn-group">
- <button type="submit" value='DELETE'
- class="btn btn-outline-dark">DELETE</button>
- <a class="btn btn-outline-dark"
- href="/notes/view?key={{#if note}}{{notekey}}{{/if}}"
- role="button">Cancel</a>
- </div>
- {{else}}
- {{> not-logged-in }}
- {{/if}}
-</div>
-</form>
+        {{#if user}}
+        <!-- <input type='hidden' name='notekey' value='{{#if note}}{{notekey}}{{/if}}'>
+        <p class="form-text">Delete {{note.title}}?</p>
+        <div class="btn-group">
+            <button type="submit" value='DELETE' class="btn btn-outline-light">DELETE</button>
+            <a class="btn btn-outline-light" href="/notes/view?key={{#if note}}{{notekey}}{{/if}}" role="button">
+                Cancel</a>
+        </div> -->
+        {{else}}
+        {{> not-logged-in }}
+        {{/if}}
+
+    <!-- </div>
+</form> -->
 ```
 
 #### **notez/partials/not-logged-in.hbs**
@@ -3407,15 +3405,45 @@ null
 #### **notez/views/noteedit.hbs**
 
 ```hbs
-..
-<div class="container-fluid">
-{{#if user}}
-..
-{{else}}
-{{> not-logged-in }}
-{{/if}}
-</div>
-..
+<!-- <form method='POST' action='/notes/save'>
+    <div class="container-fluid"> -->
+        {{#if user}}
+        <!-- {{#if docreate}}
+        <input type='hidden' name='docreate' value="create">
+        {{else}}
+        <input type='hidden' name='docreate' value="update">
+        {{/if}}
+        <div class="form-group row align-items-center">
+            <label for="notekey" class="col-1 col-form-label">Key</label>
+            {{#if docreate }}
+            <div class="col">
+                <input type='text' class="form-control" placeholder="note key" name='notekey' value='' />
+            </div>
+            {{else}}
+            {{#if note }}
+            <span class="input-group-text">{{notekey}}</span>
+            {{/if}}
+            <input type='hidden' name='notekey' value='{{#if note }}{{notekey}}{{/if}}' />
+            {{/if}}
+        </div>
+
+        <div class="form-group row">
+            <label for="title" class="col-1 col-form-label">Title</label>
+            <div class="col">
+                <input type="text" class="form-control" id='title' name='title' placeholder="note title"
+                    value='{{#if note }}{{note.title}}{{/if}}'>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <textarea class="form-control" name='body' rows="5">{{#if note }}{{note.body}}{{/if}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-default btn-outline-light">Submit</button> -->
+        {{else}}
+        {{> not-logged-in }}
+        {{/if}}
+    <!-- </div>
+</form> -->
 ```
 
 ---
