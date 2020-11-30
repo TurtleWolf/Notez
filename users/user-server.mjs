@@ -47,6 +47,40 @@ process.on('unhandledRejection', (reason, p) => {
     process.exit(1);
 });
 
+//////////// REST server route handlers
+
+// Create a user record
+server.post('/create-user', async (req, res, next) => {
+    try {
+        await connectDB();
+        let result = await createUser(req);
+        res.contentType = 'json';
+        res.send(result);
+        next(false);
+    } catch (err) {
+        res.send(500, err);
+        next(false);
+    }
+});
+
+// Find a user, if not found create one given profile information
+server.post('/find-or-create', async (req, res, next) => {
+    try {
+        await connectDB();
+        let user = await findOneUser(req.params.username);
+        if (!user) {
+            user = await createUser(req);
+            if (!user) throw new Error('No user created');
+        }
+        res.contentType = 'json';
+        res.send(user);
+        return next(false);
+    } catch (err) {
+        res.send(500, err);
+        next(false);
+    }
+});
+
 // Mimic API Key authentication.
 
 var apiKeys = [{ user: 'them', key: 'D4ED43C0-8BD6-4FE2-B358-7C0E230D11EF' }];

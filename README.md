@@ -2093,7 +2093,7 @@ null;
 mkdir users
 cd users
 npm init
-npm install debug@^4.1.x fs-extra@^9.x js-yaml@^3.14.x restify@^8.5.x restify-clients@^2.6.x sequelize@^6.x sqlite3@^5.x commander@^5.x cross-env@7.x
+npm install debug@^4.1.x fs-extra@^9.x js-yaml@^3.14.x restify@^8.5.x restify-clients@^2.6.x sequelize@^6.x sqlite3@^5.x commander@^5.x cross-env@7.x bcrypt@^5.x
 ```
 
 ```javascript
@@ -2439,6 +2439,12 @@ node cli.mjs --help
 #### **users/user-server.mjs**
 
 ```javascript
+// ...
+// process.on('unhandledRejection', (reason, p) => {
+//     console.error(`UNHANDLED PROMISE REJECTION: ${util.inspect(p)} reason: ${reason}`);
+//     process.exit(1);
+// });
+
 //////////// REST server route handlers
 
 // Create a user record
@@ -2478,59 +2484,69 @@ server.post('/find-or-create', async (req, res, next) => {
 
 ```javascript
 // ...
-program
- .command('add <username>')
- .description('Add a user to the user server')
- .option('--password <password>', 'Password for new user')
- .option('--family-name <familyName>',
-        'Family name, or last name, of the user')
- .option('--given-name <givenName>', 'Given name, or first name,
-            of the user')
- .option('--middle-name <middleName>', 'Middle name of the user')
- .option('--email <email>', 'Email address for the user')
- .action((username, cmdObj) => {
-   const topost = {
-     username, password: cmdObj.password, provider: "local",
-     familyName: cmdObj.familyName,
-     givenName: cmdObj.givenName,
-     middleName: cmdObj.middleName,
-     emails: [], photos: []
-   };
-   if (typeof cmdObj.email !== 'undefined')
-    topost.emails.push(cmdObj.email);
-   client(program).post('/create-user', topost,
-         (err, req, res, obj) => {
-     if (err) console.error(err.stack);
-     else console.log('Created '+ util.inspect(obj));
-   });
- });
+// ...
+// program
+//     .option('-p, --port <port>', 'Port number for user server, if using localhost')
+//     .option('-h, --host <host>', 'Port number for user server, if using localhost')
+//     .option('-u, --url <url>', 'Connection URL for user server, if using a remote server');
 
- program
- .command('find-or-create <username>')
- .description('Add a user to the user server')
- .option('--password <password>', 'Password for new user')
- .option('--family-name <familyName>',
-         'Family name, or last name, of the user')
- .option('--given-name <givenName>', 'Given name, or first name,
-          of the user')
- .option('--middle-name <middleName>', 'Middle name of the user')
- .option('--email <email>', 'Email address for the user')
- .action((username, cmdObj) => {
+program
+  .command('add <username>')
+  .description('Add a user to the user server')
+  .option('--password <password>', 'Password for new user')
+  .option(
+    '--family-name <familyName>',
+    'Family name, or last name, of the user'
+  )
+  .option('--given-name <givenName>', 'Given name, or first name, of the user')
+  .option('--middle-name <middleName>', 'Middle name of the user')
+  .option('--email <email>', 'Email address for the user')
+  .action((username, cmdObj) => {
     const topost = {
-      username, password: cmdObj.password, provider: "local",
-     familyName: cmdObj.familyName,
-     givenName: cmdObj.givenName,
-     middleName: cmdObj.middleName,
-     emails: [], photos: []
-   };
-   if (typeof cmdObj.email !== 'undefined')
-    topost.emails.push(cmdObj.email);
-   client(program).post('/find-or-create', topost,
-           (err, req, res, obj) => {
-    if (err) console.error(err.stack);
-    else console.log('Found or Created '+ util.inspect(obj));
+      username,
+      password: cmdObj.password,
+      provider: 'local',
+      familyName: cmdObj.familyName,
+      givenName: cmdObj.givenName,
+      middleName: cmdObj.middleName,
+      emails: [],
+      photos: [],
+    };
+    if (typeof cmdObj.email !== 'undefined') topost.emails.push(cmdObj.email);
+    client(program).post('/create-user', topost, (err, req, res, obj) => {
+      if (err) console.error(err.stack);
+      else console.log('Created ' + util.inspect(obj));
+    });
   });
- });
+
+program
+  .command('find-or-create <username>')
+  .description('Add a user to the user server')
+  .option('--password <password>', 'Password for new user')
+  .option(
+    '--family-name <familyName>',
+    'Family name, or last name, of the user'
+  )
+  .option('--given-name <givenName>', 'Given name, or first name, of the user')
+  .option('--middle-name <middleName>', 'Middle name of the user')
+  .option('--email <email>', 'Email address for the user')
+  .action((username, cmdObj) => {
+    const topost = {
+      username,
+      password: cmdObj.password,
+      provider: 'local',
+      familyName: cmdObj.familyName,
+      givenName: cmdObj.givenName,
+      middleName: cmdObj.middleName,
+      emails: [],
+      photos: [],
+    };
+    if (typeof cmdObj.email !== 'undefined') topost.emails.push(cmdObj.email);
+    client(program).post('/find-or-create', topost, (err, req, res, obj) => {
+      if (err) console.error(err.stack);
+      else console.log('Found or Created ' + util.inspect(obj));
+    });
+  });
 ```
 
 ```bash section 6

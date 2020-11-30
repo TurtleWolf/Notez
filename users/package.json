@@ -16,6 +16,7 @@
   "author": "TurtleWolfe https://ScriptHammer.com",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "commander": "^5.1.0",
     "cross-env": "^7.0.2",
     "debug": "^4.3.1",
