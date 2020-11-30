@@ -2367,6 +2367,10 @@ function check(req, res, next) {
 
 **_`Creating a command-line tool to test and administer the user authentication server`_**
 
+```bash section 4
+touch cli.mjs
+```
+
 #### **users/cli.mjs**
 
 ```javascript
