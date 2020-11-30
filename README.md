@@ -2107,9 +2107,8 @@ null;
 **_`Developing the user information model`_**
 
 ```bash section 3
-code sample
-code sample
-code sample
+touch users-sequelize.mjs
+touch sequelize-sqlite.yaml
 ```
 
 #### **users/users-sequelize.mjs**
