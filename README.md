@@ -681,7 +681,7 @@ null
             {{#if note }}
             <span class="input-group-text">{{notekey}}</span>
             {{/if}}
-            <input type='hidden' name='notekey' value='{{#if note }}{{notekey}}{{/if}} ' />
+            <input type='hidden' name='notekey' value='{{#if note }}{{notekey}}{{/if}}' />
             {{/if}}
         </div>
 
@@ -2093,7 +2093,7 @@ null;
 mkdir users
 cd users
 npm init
-npm install debug@^4.1.x fs-extra@^9.x js-yaml@^3.14.x \ restify@^8.5.x restify-clients@^2.6.x sequelize@^6.x \ sqlite3@^5.x commander@^5.x cross-env@7.x
+npm install debug@^4.1.x fs-extra@^9.x js-yaml@^3.14.x restify@^8.5.x restify-clients@^2.6.x sequelize@^6.x sqlite3@^5.x commander@^5.x cross-env@7.x
 ```
 
 ```javascript
