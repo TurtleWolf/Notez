@@ -2605,6 +2605,11 @@ server.get('/list', async (req, res, next) => {
 #### **users/cli.mjs**
 
 ```javascript
+// ...
+// program
+//     .command('find-or-create <username>')
+// ...
+
 program
   .command('find <username>')
   .description('Search for a user on the user server')
