@@ -3582,14 +3582,17 @@ node_modules
 
 ```bash section 22
 npm i passport-twitter@1.x
+touch public/assets/vendor/twitter
 ```
 
 #### **notez/routes/users.mjs**
 
 ```javascript
-// ...
+// const LocalStrategy = passportLocal.Strategy;
 import passportTwitter from 'passport-twitter';
 const TwitterStrategy = passportTwitter.Strategy;
+// ...
+// passport.deserializeUser(async (username, done) => {
 // ...
 
 const twittercallback = process.env.TWITTER_CALLBACK_HOST
@@ -3653,21 +3656,17 @@ router.get(
 
 ```javascript
 // ...
-{{else}}
-<div class="collapse navbar-collapse" id="navbarLogIn">
-    <span class="navbar-text text-dark col"></span>
-    <a class="nav-item nav-link btn btn-dark col-auto" href="/users/login">
-                                Log in</a>
-    {{#if twitterLogin}}
-    <a class="nav-item nav-link btn btn-dark col-auto"
-       href="/users/auth/twitter">
-    <img width="15px"
-    src="/assets/vendor/twitter/Twitter_SocialIcon
-       _Rounded_Square_Color.png"/>
+//  {{else}}
+//  <div class="collapse navbar-collapse" id="navbarLogIn">
+//      <span class="navbar-text text-dark col"></span>
+//      <a class="nav-item nav-link btn btn-default btn-outline-light floatRight col-auto" href="/users/login">Log in</a>
+     {{#if twitterLogin}}
+     <a class="nav-item nav-link btn btn-dark col-auto" href="/users/auth/twitter">
+         <img width="15px" src="/assets/vendor/twitter/Twitter_SocialIcon_Rounded_Square_Color.png" />
          Log in with Twitter</a>
-    {{/if}}
-</div>
-{{/if}}
+     {{/if}}
+// </div>
+// {{/if}}
 ```
 
 [https://about.twitter.com/company/brand-assets.](https://about.twitter.com/company/brand-assets 'Twitter Assets')
@@ -3675,18 +3674,91 @@ router.get(
 #### **notez/routes/index.mjs**
 
 ```javascript
-// ...
+// // const util = require('util');
+// import { default as express } from 'express';
+// import { NotesStore as notes } from '../models/notes-store.mjs';
 import { twitterLogin } from './users.mjs';
-// ...
-// router.get('/', async (req, res, next) => {
-    // ...
-        // res.render('index', {
-            // title: 'Notes', notelist: notelist,
-            // user: req.user ? req.user : undefined,
-            twitterLogin: twitterLogin
-        // });
-    // ...
-});
+// export const router = express.Router();
+
+// import { ensureAuthenticated } from './users.mjs';
+
+// // Add Note.
+// router.get('/add', ensureAuthenticated, (req, res, next) => {
+//     res.render('noteedit', {
+//         title: "Add a Note",
+//         docreate: true,
+//         notekey: '',
+//         user: req.user,
+        twitterLogin: twitterLogin,
+//         note: undefined
+//     });
+// });
+
+// // Save Note (update)
+// router.post('/save', ensureAuthenticated, async (req, res, next) => {
+//     try {
+//         let note;
+//         if (req.body.docreate === "create") {
+//             note = await notes.create(req.body.notekey,
+//                 req.body.title, req.body.body);
+//         } else {
+//             note = await notes.update(req.body.notekey,
+//                 req.body.title, req.body.body);
+//         }
+//         res.redirect('/notes/view?key=' + req.body.notekey);
+//     } catch (err) { next(err); }
+// });
+
+// // Read Note (read)
+// router.get('/view', async (req, res, next) => {
+//     try {
+//         let note = await notes.read(req.query.key);
+//         res.render('noteview', {
+//             title: note ? note.title : "",
+//             notekey: req.query.key,
+//             user: req.user ? req.user : undefined,
+            twitterLogin: twitterLogin,
+//             note: note
+//         });
+//     } catch (err) { next(err); }
+// });
+
+// // Edit note (update)
+// router.get('/edit', ensureAuthenticated, async (req, res, next) => {
+//     try {
+//         const note = await notes.read(req.query.key);
+//         res.render('noteedit', {
+//             title: note ? ("Edit " + note.title) : "Add a Note",
+//             docreate: false,
+//             notekey: req.query.key,
+//             user: req.user,
+            twitterLogin: twitterLogin,
+//             note: note
+//         });
+//     } catch (err) { next(err); }
+// });
+
+// // Ask to Delete note (destroy)
+// router.get('/destroy', ensureAuthenticated, async (req, res, next) => {
+//     try {
+//         const note = await notes.read(req.query.key);
+//         res.render('notedestroy', {
+//             title: note ? `Delete ${note.title}` : "",
+//             notekey: req.query.key,
+//             user: req.user,
+            twitterLogin: twitterLogin,
+//             note: note
+//         });
+//     } catch (err) { next(err); }
+// });
+
+// // Really destroy note (destroy)
+// router.post('/destroy/confirm', ensureAuthenticated, async (req, res, next) => {
+//     try {
+//         await notes.destroy(req.body.notekey);
+//         res.redirect('/');
+//     } catch (err) { next(err); }
+// });
 ```
 
 #### **notez/routes/notes.mjs**

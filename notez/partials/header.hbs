@@ -20,7 +20,13 @@
         {{else}}
         <div class="collapse navbar-collapse" id="navbarLogIn">
             <span class="navbar-text text-dark col"></span>
-            <a class="btn btn-default btn-outline-light floatRight" href="/users/login">Log in</a>
+            <a class="nav-item nav-link btn btn-default btn-outline-light floatRight col-auto" href="/users/login">Log
+                in</a>
+            {{#if twitterLogin}}
+            <a class="nav-item nav-link btn btn-dark col-auto" href="/users/auth/twitter">
+                <img width="15px" src="/assets/vendor/twitter/Twitter_SocialIcon_Rounded_Square_Color.png" />
+                Log in with Twitter</a>
+            {{/if}}
         </div>
         {{/if}}
     </nav>
