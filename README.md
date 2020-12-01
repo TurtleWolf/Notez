@@ -3846,29 +3846,117 @@ null;
 #### **users/cli.mjs**
 
 ```javascript
+// import * as util from 'util';
+
 import { default as bcrypt } from 'bcrypt';
 const saltRounds = 10;
 // ...
+
+// const client = (program) => {
+// ...
+// }
+
 async function hashpass(password) {
  let salt = await bcrypt.genSalt(saltRounds);
  let hashed = await bcrypt.hash(password, salt);
  return hashed;
 }
-// ...
-// x3 (add, find-or-create, and update)
-.action(async (username, cmdObj) => {
-  // const topost = {
-    // username,
-    password: await hashpass(cmdObj.password),
-    // ...
-  // };
-  // ...
- })
+// program
+//     .option('-p, --port <port>', 'Port number for user server, if using localhost')
+//     .option('-h, --host <host>', 'Port number for user server, if using localhost')
+//     .option('-u, --url <url>', 'Connection URL for user server, if using a remote server');
+
+
+// program
+//     .command('add <username>')
+//     .description('Add a user to the user server')
+//     .option('--password <password>', 'Password for new user')
+//     .option('--family-name <familyName>', 'Family name, or last name, of the user')
+//     .option('--given-name <givenName>', 'Given name, or first name, of the user')
+//     .option('--middle-name <middleName>', 'Middle name of the user')
+//     .option('--email <email>', 'Email address for the user')
+    .action(async (username, cmdObj) => {
+        // const topost = {
+        //     username,
+            password: await hashpass(cmdObj.password),
+//             provider: "local",
+//             familyName: cmdObj.familyName,
+//             givenName: cmdObj.givenName,
+//             middleName: cmdObj.middleName,
+//             emails: [],
+//             photos: []
+//         };
+//         if (typeof cmdObj.email !== 'undefined')
+//             topost.emails.push(cmdObj.email);
+//         client(program).post('/create-user', topost,
+//             (err, req, res, obj) => {
+//                 if (err) console.error(err.stack);
+//                 else console.log('Created ' + util.inspect(obj));
+//             });
+//     });
+
+// program
+//     .command('find-or-create <username>')
+//     .description('Add a user to the user server')
+//     .option('--password <password>', 'Password for new user')
+//     .option('--family-name <familyName>',
+//         'Family name, or last name, of the user')
+//     .option('--given-name <givenName>', 'Given name, or first name, of the user')
+//     .option('--middle-name <middleName>', 'Middle name of the user')
+//     .option('--email <email>', 'Email address for the user')
+    .action(async (username, cmdObj) => {
+        // const topost = {
+        //     username,
+            password: await hashpass(cmdObj.password),
+//             provider: "local",
+//             familyName: cmdObj.familyName,
+//             givenName: cmdObj.givenName,
+//             middleName: cmdObj.middleName,
+//             emails: [],
+//             photos: []
+//         };
+//         if (typeof cmdObj.email !== 'undefined')
+//             topost.emails.push(cmdObj.email);
+//         client(program).post('/find-or-create', topost,
+//             (err, req, res, obj) => {
+//                 if (err) console.error(err.stack);
+//                 else console.log('Found or Created ' + util.inspect(obj));
+//             });
+//     });
+
+// program
+//     .command('update <username>')
+//     .description('Add a user to the user server')
+//     .option('--password <password>', 'Password for new user')
+//     .option('--family-name <familyName>', 'Family name, or last name, of the user')
+//     .option('--given-name <givenName>', 'Given name, or first name, of the user')
+//     .option('--middle-name <middleName>', 'Middle name of the user')
+//     .option('--email <email>', 'Email address for the user')
+    .action(async (username, cmdObj) => {
+        // const topost = {
+        //     username,
+            password: await hashpass(cmdObj.password),
+    //         familyName: cmdObj.familyName,
+    //         givenName: cmdObj.givenName,
+    //         middleName: cmdObj.middleName,
+    //         emails: [],
+    //         photos: []
+    //     };
+    //     if (typeof cmdObj.email !== 'undefined')
+    //         topost.emails.push(cmdObj.email);
+    //     client(program).post(`/update-user/${username}`, topost,
+    //         (err, req, res, obj) => {
+    //             if (err) console.error(err.stack);
+    //             else console.log('Updated ' + util.inspect(obj));
+    //         });
+    // });
 ```
 
 #### **notez/user-server.mjs**
 
 ```javascript
+// const error = DBG('users:error');
+
 import { default as bcrypt } from 'bcrypt';
 // ...
 server.post('/password-check', async (req, res, next) => {
@@ -3902,6 +3990,7 @@ server.post('/password-check', async (req, res, next) => {
 ```
 
 ```bash section 24
+cd users
 npm start
 ```
 

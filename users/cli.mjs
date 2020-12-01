@@ -2,6 +2,9 @@ import { default as program } from 'commander';
 import { default as restify } from 'restify-clients';
 import * as util from 'util';
 
+import { default as bcrypt } from 'bcrypt';
+const saltRounds = 10;
+
 var client_port;
 var client_host;
 var client_version = '*';
@@ -33,36 +36,36 @@ const client = (program) => {
     return client;
 };
 
+async function hashpass(password) {
+    let salt = await bcrypt.genSalt(saltRounds);
+    let hashed = await bcrypt.hash(password, salt);
+    return hashed;
+}
+
 program
-    .option(
-        '-p, --port <port>',
-        'Port number for user server, if using localhost'
-    )
-    .option(
-        '-h, --host <host>',
-        'Port number for user server, if using localhost'
-    )
-    .option(
-        '-u, --url <url>',
-        'Connection URL for user server, if using a remote server'
-    );
+    .option('-p, --port <port>', 'Port number for user server, if using localhost')
+    .option('-h, --host <host>', 'Port number for user server, if using localhost')
+    .option('-u, --url <url>', 'Connection URL for user server, if using a remote server');
+
 
 program
     .command('add <username>')
     .description('Add a user to the user server')
     .option('--password <password>', 'Password for new user')
-    .option('--family-name <familyName>',
-        'Family name, or last name, of the user')
+    .option('--family-name <familyName>', 'Family name, or last name, of the user')
     .option('--given-name <givenName>', 'Given name, or first name, of the user')
     .option('--middle-name <middleName>', 'Middle name of the user')
     .option('--email <email>', 'Email address for the user')
-    .action((username, cmdObj) => {
+    .action(async (username, cmdObj) => {
         const topost = {
-            username, password: cmdObj.password, provider: "local",
+            username,
+            password: await hashpass(cmdObj.password),
+            provider: "local",
             familyName: cmdObj.familyName,
             givenName: cmdObj.givenName,
             middleName: cmdObj.middleName,
-            emails: [], photos: []
+            emails: [],
+            photos: []
         };
         if (typeof cmdObj.email !== 'undefined')
             topost.emails.push(cmdObj.email);
@@ -82,13 +85,16 @@ program
     .option('--given-name <givenName>', 'Given name, or first name, of the user')
     .option('--middle-name <middleName>', 'Middle name of the user')
     .option('--email <email>', 'Email address for the user')
-    .action((username, cmdObj) => {
+    .action(async (username, cmdObj) => {
         const topost = {
-            username, password: cmdObj.password, provider: "local",
+            username,
+            password: await hashpass(cmdObj.password),
+            provider: "local",
             familyName: cmdObj.familyName,
             givenName: cmdObj.givenName,
             middleName: cmdObj.middleName,
-            emails: [], photos: []
+            emails: [],
+            photos: []
         };
         if (typeof cmdObj.email !== 'undefined')
             topost.emails.push(cmdObj.email);
@@ -107,13 +113,15 @@ program
     .option('--given-name <givenName>', 'Given name, or first name, of the user')
     .option('--middle-name <middleName>', 'Middle name of the user')
     .option('--email <email>', 'Email address for the user')
-    .action((username, cmdObj) => {
+    .action(async (username, cmdObj) => {
         const topost = {
-            username, password: cmdObj.password,
+            username,
+            password: await hashpass(cmdObj.password),
             familyName: cmdObj.familyName,
             givenName: cmdObj.givenName,
             middleName: cmdObj.middleName,
-            emails: [], photos: []
+            emails: [],
+            photos: []
         };
         if (typeof cmdObj.email !== 'undefined')
             topost.emails.push(cmdObj.email);

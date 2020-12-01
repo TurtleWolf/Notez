@@ -142,35 +142,38 @@ server.del('/destroy/:username', async (req, res, next) => {
 
 // Check password
 server.post('/password-check', async (req, res, next) => {
+    log(`passwordCheck ${util.inspect(req.params)}`);
     try {
         await connectDB();
-        const user = await SQUser.findOne({
-            where: { username: req.params.username },
-        });
+        const user = await SQUser.findOne({ where: { username: req.params.username } });
+        log(`userPasswordCheck query=${req.params.username} ${req.params.password} user=${user.username} ${user.password}`);
         let checked;
         if (!user) {
             checked = {
-                check: false,
-                username: req.params.username,
-                message: 'Could not find user',
+                check: false, username: req.params.username,
+                message: "Could not find user"
             };
-        } else if (
-            user.username === req.params.username &&
-            user.password === req.params.password
-        ) {
-            checked = { check: true, username: user.username };
         } else {
-            checked = {
-                check: false,
-                username: req.params.username,
-                message: 'Incorrect password',
-            };
+            let pwcheck = false;
+            if (user.username === req.params.username) {
+                pwcheck = await bcrypt.compare(req.params.password, user.password);
+            }
+            if (pwcheck) {
+                checked = { check: true, username: user.username };
+            } else {
+                checked = {
+                    check: false, username: req.params.username,
+                    message: "Incorrect username or password"
+                };
+            }
         }
+        log(`passwordCheck result=${util.inspect(checked)}`);
         res.contentType = 'json';
         res.send(checked);
         next(false);
     } catch (err) {
         res.send(500, err);
+        error(`/passwordCheck ${err.stack}`);
         next(false);
     }
 });
