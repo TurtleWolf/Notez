@@ -15,6 +15,9 @@ const __dirname = approotdir;
 import {
   normalizePort, onError, onListening, handle404, basicErrorHandler
 } from './appsupport.mjs';
+
+import dotenv from 'dotenv/config.js';
+
 // import { InMemoryNotesStore } from './models/notes-memory.mjs';
 // export const NotesStore = new InMemoryNotesStore();
 

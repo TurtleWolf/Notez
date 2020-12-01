@@ -3542,11 +3542,15 @@ null;
 
 ```bash section 21
 npm i dotenv@8.2.x
+touch .env
 ```
 
 #### **notez/app.mjs**
 
 ```javascript
+// import {
+//   normalizePort, onError, onListening, handle404, basicErrorHandler
+// } from './appsupport.mjs';
 import dotenv from 'dotenv/config.js';
 ```
 

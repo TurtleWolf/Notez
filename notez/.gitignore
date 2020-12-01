@@ -1,9 +1,28 @@
 # notez
-notes-fs-data/
-notes.level/
 *.sqlite3
+chap07.sqlite3
+data
 data/
+notes-fs-data
+notes-fs-data/
+notes-sequelize.sqlite3
+notes.level
+notes.level/
+package-lock.json
 sessions/
+
+# .env
+# dotenv environment variables file
+# .env
+
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+node_modules
+node_modules/
+jspm_packages/
+
 # Logs
 logs
 *.log
@@ -38,15 +57,8 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directories
-node_modules/
-jspm_packages/
-
 # Typescript v1 declaration files
 typings/
-
-# Optional npm cache directory
-.npm
 
 # Optional eslint cache
 .eslintcache
@@ -59,9 +71,6 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# dotenv environment variables file
-.env
 
 # next.js build output
 .next
