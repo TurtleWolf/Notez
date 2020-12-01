@@ -25,6 +25,7 @@
     "dl-slate-min-css": "wget https://bootswatch.com/4/slate/bootstrap.min.css -O slate/bootstrap.min.css"
   },
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.5.3",
     "cookie-parser": "~1.4.4",
     "cross-env": "^7.0.2",
