@@ -4010,9 +4010,7 @@ node cli.mjs password-check me w0rdy
 **_`Implementing encrypted password support in the Notes application`_**
 
 ```bash section 25
-code sample
-code sample
-code sample
+null
 ```
 
 #### **users/users-superagent.mjs**

@@ -4,8 +4,8 @@ import DBG from 'debug';
 const debug = DBG('notes:users-superagent');
 const error = DBG('notes:error-superagent');
 
-// import { default as bcrypt } from 'bcrypt';
-// const saltRounds = 10;
+import { default as bcrypt } from 'bcrypt';
+const saltRounds = 10;
 
 var authid = 'them';
 var authcode = 'D4ED43C0-8BD6-4FE2-B358-7C0E230D11EF';
@@ -16,11 +16,11 @@ function reqURL(path) {
     return requrl.toString();
 }
 
-// async function hashpass(password) {
-//     let salt = await bcrypt.genSalt(saltRounds);
-//     let hashed = await bcrypt.hash(password, salt);
-//     return hashed;
-// }
+async function hashpass(password) {
+    let salt = await bcrypt.genSalt(saltRounds);
+    let hashed = await bcrypt.hash(password, salt);
+    return hashed;
+}
 
 export async function create(
     username,
