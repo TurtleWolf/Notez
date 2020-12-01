@@ -3457,7 +3457,7 @@ touch partials/not-logged-in.hbs
 ```json
 {
   "scripts": {
-    "start": "cross-env DEBUG=notes:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize USER_SERVICE_URL=http://localhost:5858 node ./app.mjs"
+    "start": "cross-env REQUEST_LOG_FILE=log.txt REQUEST_LOG_FORMAT=common DEBUG=notez:* SEQUELIZE_CONNECT=models/sequelize-sqlite.yaml NOTES_MODEL=sequelize USER_SERVICE_URL=http://localhost:5858 node ./app.mjs"
     // ...
   }
 }
@@ -3466,6 +3466,34 @@ touch partials/not-logged-in.hbs
 ```bash section 18
 cd users
 npm start
+```
+
+```bash section 18
+cd notes
+DEBUG=notez:* npm start
+```
+
+---
+
+```bash section 18
+cd users
+node cli.mjs --help
+node cli.mjs add --password w0rd --family-name Einarrsdottir --given-name Ashildr --email me@stolen.tardis me
+node cli.mjs find-or-create --password foooo --family-name Smith --given-name John --middle-name Snuffy --email snuffy@example.com snuffy-smith
+node cli.mjs update --password fooooey --family-name Smith --given-name John --middle-name Snuffy --email snuffy3@gmail.com snuffy-smith
+node cli.mjs destroy snuffy-smith
+node cli.mjs find me
+node cli.mjs find snuffy-smith
+node cli.mjs list-users
+node cli.mjs password-check me w0rd
+node cli.mjs password-check me w0rdy
+npm start
+```
+
+```bash section 18
+cd notes
+mkdir data
+mongod --dbpath data
 ```
 
 ```bash section 18
