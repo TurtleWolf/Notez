@@ -1,22 +1,22 @@
+// import * as favicon from'serve-favicon';
+import * as http from 'http';
+import * as path from 'path';
+import { approotdir } from './approotdir.mjs';
+import { default as bodyParser } from 'body-parser';
+import { default as cookieParser } from 'cookie-parser';
 import { default as express } from 'express';
 import { default as hbs } from 'hbs';
-import * as path from 'path';
-// import * as favicon from'serve-favicon';
 import { default as logger } from 'morgan';
 import { default as rfs } from 'rotating-file-stream';
-import { default as DBG } from 'debug';
-const debug = DBG('notez:debug');
-const dbgerror = DBG('notez:error');
-import { default as cookieParser } from 'cookie-parser';
-import { default as bodyParser } from 'body-parser';
-import * as http from 'http';
-import { approotdir } from './approotdir.mjs';
-const __dirname = approotdir;
 import {
   normalizePort, onError, onListening, handle404, basicErrorHandler
 } from './appsupport.mjs';
-
 import dotenv from 'dotenv/config.js';
+import { default as DBG } from 'debug';
+const debug = DBG('notez:debug');
+const dbgerror = DBG('notez:error');
+const __dirname = approotdir;
+
 
 // import { InMemoryNotesStore } from './models/notes-memory.mjs';
 // export const NotesStore = new InMemoryNotesStore();
@@ -24,6 +24,9 @@ import dotenv from 'dotenv/config.js';
 import { router as indexRouter } from './routes/index.mjs';
 import { router as notesRouter } from './routes/notes.mjs';
 import { router as usersRouter, initPassport } from './routes/users.mjs';
+
+import socketio from 'socket.io';
+import passportSocketIo from 'passport.socketio';
 
 import session from 'express-session';
 // For compatible session store packages, see:
@@ -38,6 +41,10 @@ const FileStore = sessionFileStore(session);
 // import sessionMemoryStore from 'memorystore';
 // const MemoryStore = sessionMemoryStore(session);
 export const sessionCookieName = 'notescookie.sid';
+// secret: 'keyboard mouse',
+const sessionSecret = 'keyboard mouse';
+// store: new FileStore({ path: 'sessions' }),
+const sessionStore = new FileStore({ path: "sessions" });
 
 import { useModel as useNotesModel } from './models/notes-store.mjs';
 useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : "memory")
@@ -46,6 +53,29 @@ useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : "memory")
   .catch(error => { onError({ code: 'ENOTESSTORE', error }); });
 
 export const app = express();
+
+export const port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+export const server = http.createServer(app);
+
+server.listen(port);
+server.on('request', (req, res) => {
+  debug(`${new Date().toISOString()} request ${req.method} ${req.url}`);
+});
+server.on('error', onError);
+server.on('listening', onListening);
+
+export const io = socketio(server);
+
+io.use(passportSocketIo.authorize({
+  cookieParser: cookieParser,
+  key: sessionCookieName,
+  secret: sessionSecret,
+  store: sessionStore
+}));
+
+// TODO is success and fail callbacks required or useful?  These are marked optional.
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -72,8 +102,8 @@ app.use(
     // Use the appropriate session store class
     // store: new MemoryStore({}),
     // store: new LokiStore({}),
-    store: new FileStore({ path: 'sessions' }),
-    secret: 'keyboard mouse',
+    store: sessionStore,
+    secret: sessionSecret,
     resave: true,
     saveUninitialized: true,
     name: sessionCookieName,
@@ -105,14 +135,15 @@ app.use('/notes', notesRouter);
 app.use(handle404);
 app.use(basicErrorHandler);
 
-export const port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+// moved next 11 lines higher in code.. per socket io chapter nine
+// export const port = normalizePort(process.env.PORT || '3000');
+// app.set('port', port);
 
-export const server = http.createServer(app);
+// export const server = http.createServer(app);
 
-server.listen(port);
-server.on('request', (req, res) => {
-  debug(`${new Date().toISOString()} request ${req.method} ${req.url}`);
-});
-server.on('error', onError);
-server.on('listening', onListening);
+// server.listen(port);
+// server.on('request', (req, res) => {
+//   debug(`${new Date().toISOString()} request ${req.method} ${req.url}`);
+// });
+// server.on('error', onError);
+// server.on('listening', onListening);

@@ -4117,43 +4117,76 @@ npm i socket.io@2.x passport.socketio@3.7.x
 #### **notez/app.mjs**
 
 ```javascript
+// import * as http from 'http';
+// ...
+// import { router as indexRouter } from './routes/index.mjs';
+// import { router as notesRouter } from './routes/notes.mjs';
+// import { router as usersRouter, initPassport } from './routes/users.mjs';
+
 import socketio from 'socket.io';
 import passportSocketIo from 'passport.socketio';
-// ...
-// import session from 'express-session';
-// import sessi/onFileStore from 'session-file-store';
-// const FileStore = sessionFileStore(session);
-// export const sessionCookieName = 'notescookie.sid';
+
+import session from 'express-session';
+import sessionFileStore from 'session-file-store';
+const FileStore = sessionFileStore(session);
+export const sessionCookieName = 'notescookie.sid';
 const sessionSecret = 'keyboard mouse';
-const sessionStore = new FileStore({ path: 'sessions' });
-// ...
+const sessionStore = new FileStore({ path: "sessions" });
+
+// import { useModel as useNotesModel } from './models/notes-store.mjs';
+// useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : "memory")
+//   .then(store => { })
+//   // .then(store => { debug(`Using NotesStore ${store}`); })
+//   .catch(error => { onError({ code: 'ENOTESSTORE', error }); });
+
 // export const app = express();
 
-// export const port = normalizePort(process.env.PORT || '3000');
-// app.set('port', port);
+export const port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
 
-// export const server = http.createServer(app);
+export const server = http.createServer(app);
 
-// server.listen(port);
-// server.on('request', (req, res) => {
-//     debug(`${new Date().toISOString()} request ${req.method} ${req.url}`);
-// });
-// server.on('error', onError);
-// server.on('listening', onListening);
+server.listen(port);
+server.on('request', (req, res) => {
+  debug(`${new Date().toISOString()} request ${req.method} ${req.url}`);
+});
+server.on('error', onError);
+server.on('listening', onListening);
 
 export const io = socketio(server);
 
-io.use(
-  passportSocketIo.authorize({
-    cookieParser: cookieParser,
-    key: sessionCookieName,
-    secret: sessionSecret,
-    store: sessionStore,
-  })
-);
-// ...
+io.use(passportSocketIo.authorize({ 
+  cookieParser: cookieParser, 
+  key: sessionCookieName, 
+  secret: sessionSecret, 
+  store: sessionStore
+}));
+
+// // view engine setup
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'hbs');
+// hbs.registerPartials(path.join(__dirname, 'partials'));
+
+// app.use(logger(process.env.REQUEST_LOG_FORMAT || 'dev', {
+//   stream: process.env.REQUEST_LOG_FILE ?
+//     rfs.createStream(process.env.REQUEST_LOG_FILE, {
+//       size: '10M',     // rotate every 10 MegaBytes written
+//       interval: '1d',  // rotate daily
+//       compress: 'gzip' // compress rotated files
+//     })
+//     : process.stdout
+// }));
+// if (process.env.REQUEST_LOG_FILE) {
+//   app.use(logger(process.env.REQUEST_LOG_FORMAT || 'dev'));
+// }
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(cookieParser());
 app.use(
   session({
+    // Use the appropriate session store class
+    // store: new MemoryStore({}),
+    // store: new LokiStore({}),
     store: sessionStore,
     secret: sessionSecret,
     resave: true,
@@ -4162,6 +4195,8 @@ app.use(
   })
 );
 initPassport(app);
+
+// ...
 ```
 
 ---
