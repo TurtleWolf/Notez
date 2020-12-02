@@ -12,6 +12,29 @@ header {
   padding: 5px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: yellow;
+}
+
+.yellowText {
+  color: yellow;
+}
+
+.form-control {
+  color: #000;
+  background-color: rgb(253, 249, 184);
+}
+
+.form-control:focus {
+  color: #000;
+  background-color: yellow;
+}
+
 @media screen and (min-width: 600px) {
   /* Screens above 600px width */
   .floatRight {

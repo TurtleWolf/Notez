@@ -91,7 +91,7 @@ passport.deserializeUser(async (username, done) => {
 
 const twittercallback = process.env.TWITTER_CALLBACK_HOST
     ? process.env.TWITTER_CALLBACK_HOST
-    : 'http://localhost:3000';
+    : 'http://127.0.0.1:3000';
 export var twitterLogin;
 
 if (

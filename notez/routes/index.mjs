@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
     const notelist = await Promise.all(keyPromises);
     // console.log(util.inspect(notelist));
     res.render('index', {
-      title: 'Notes',
+      title: 'Notez @ ScriptHammer.com',
       notelist: notelist,
       user: req.user ? req.user : undefined,
       twitterLogin: twitterLogin
