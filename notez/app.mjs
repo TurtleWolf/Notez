@@ -21,8 +21,8 @@ const __dirname = approotdir;
 // import { InMemoryNotesStore } from './models/notes-memory.mjs';
 // export const NotesStore = new InMemoryNotesStore();
 
-import { router as indexRouter } from './routes/index.mjs';
-import { router as notesRouter } from './routes/notes.mjs';
+import { router as indexRouter, init as homeInit } from './routes/index.mjs';
+import { router as notesRouter, init as notesInit } from './routes/notes.mjs';
 import { router as usersRouter, initPassport } from './routes/users.mjs';
 
 import socketio from 'socket.io';
@@ -48,7 +48,11 @@ const sessionStore = new FileStore({ path: "sessions" });
 
 import { useModel as useNotesModel } from './models/notes-store.mjs';
 useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : "memory")
-  .then(store => { })
+  .then(store => {
+    debug(`Using NotesStore ${store}`);
+    homeInit();
+    notesInit();
+  })
   // .then(store => { debug(`Using NotesStore ${store}`); })
   .catch(error => { onError({ code: 'ENOTESSTORE', error }); });
 

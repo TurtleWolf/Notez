@@ -23,3 +23,6 @@ router.get('/', async (req, res, next) => {
     next(err);
   }
 });
+
+export function init() {
+}

@@ -4131,7 +4131,7 @@ import sessionFileStore from 'session-file-store';
 const FileStore = sessionFileStore(session);
 export const sessionCookieName = 'notescookie.sid';
 const sessionSecret = 'keyboard mouse';
-const sessionStore = new FileStore({ path: "sessions" });
+const sessionStore = new FileStore({ path: 'sessions' });
 
 // import { useModel as useNotesModel } from './models/notes-store.mjs';
 // useNotesModel(process.env.NOTES_MODEL ? process.env.NOTES_MODEL : "memory")
@@ -4155,12 +4155,14 @@ server.on('listening', onListening);
 
 export const io = socketio(server);
 
-io.use(passportSocketIo.authorize({ 
-  cookieParser: cookieParser, 
-  key: sessionCookieName, 
-  secret: sessionSecret, 
-  store: sessionStore
-}));
+io.use(
+  passportSocketIo.authorize({
+    cookieParser: cookieParser,
+    key: sessionCookieName,
+    secret: sessionSecret,
+    store: sessionStore,
+  })
+);
 
 // // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
@@ -4226,50 +4228,133 @@ null
 #### **notez/models/Notes.mjs**
 
 ```javascript
+// const _note_key = Symbol('key');
+// const _note_title = Symbol('title');
+// const _note_body = Symbol('body');
+
+// export class Note {
+// ...
+// }
+
 import EventEmitter from 'events';
 
-// export class AbstractNotesStore extends EventEmitter {
-//  static store() { }
-//  async close() { }
-//  async update(key, title, body) { }
-//  async create(key, title, body) { }
-//  async read(key) { }
-//  async destroy(key) { }
-//  async keylist() { }
-//  async count() { }
+export class AbstractNotesStore extends EventEmitter {
+  // static store() { }
+  // async close() { } // TBD document in book
+  // async update(key, title, body) { }
+  // async create(key, title, body) { }
+  // async read(key) { }
+  // async destroy(key) { }
+  // async keylist() { }
+  // async count() { }
 
- emitCreated(note) { this.emit('notecreated', note); }
- emitUpdated(note) { this.emit('noteupdated', note); }
- emitDestroyed(key) { this.emit('notedestroyed', key); }
+  emitCreated(note) {
+    this.emit('notecreated', note);
+  }
+  emitUpdated(note) {
+    this.emit('noteupdated', note);
+  }
+  emitDestroyed(key) {
+    this.emit('notedestroyed', key);
+  }
 }
 ```
 
 #### **notez/models/notes-sequelize.mjs**
 
 ```javascript
-// async update(key, title, body) {
+// import { Note, AbstractNotesStore } from './Notes.mjs';
+// import Sequelize from 'sequelize';
+// import {
+//     connectDB as connectSequlz,
+//     close as closeSequlz
+// } from './sequlz.mjs';
+// 
+// let sequelize;
+// export class SQNote extends Sequelize.Model { }
+// 
+// async function connectDB() {
 // ...
-//  const note = await this.read(key);
-this.emitUpdated(note);
-//  return note;
-// ...
-// }
-// async create(key, title, body) {
-// ...
-//  const note = new Note(sqnote.notekey, sqnote.title, sqnote.body);
-this.emitCreated(note);
-//  return note;
 // }
 
-// async destroy(key) {
-//  ...
-this.emitDestroyed(key);
+export default class SequelizeNotesStore extends AbstractNotesStore {
+
+    // async close() {
+    //     closeSequlz();
+    //     sequelize = undefined;
+    // }
+
+    // async update(key, title, body) {
+    //     await connectDB();
+    //     const note = await SQNote.findOne({ where: { notekey: key } });
+    //     if (!note) {
+    //         throw new Error(`No note found for ${key}`);
+    //     } else {
+    //         await SQNote.update({
+    //             title: title,
+    //             body: body
+    //         }, {
+    //             where: { notekey: key }
+    //         });
+            let note = await this.read(key);
+            debug(`UPDATE ${util.inspect(note)}`);
+            this.emitUpdated(note);
+            return note;
+    //     }
+    // }
+
+    // async create(key, title, body) {
+    //     await connectDB();
+    //     const sqnote = await SQNote.create({
+    //         notekey: key,
+    //         title: title,
+    //         body: body
+    //     });
+        let note = new Note(sqnote.notekey, sqnote.title, sqnote.body);
+        debug(`CREATE ${util.inspect(note)}`);
+        this.emitCreated(note);
+        return note;
+    // }
+
+    // async read(key) {
+    //     await connectDB();
+    //     const note = await SQNote.findOne({ where: { notekey: key } });
+    //     debug(note);
+    //     if (!note) {
+    //         throw new Error(`No note found for ${key}`);
+    //     } else {
+    //         return new Note(note.notekey, note.title, note.body);
+    //     }
+    // }
+
+    // async destroy(key) {
+    //     await connectDB();
+    //     await SQNote.destroy({ where: { notekey: key } });
+    //     debug(`DESTROY ${key}`);
+        this.emitDestroyed(key);
+//     }
+
+//     async keylist() {
+//         await connectDB();
+//         const notes = await SQNote.findAll({ attributes: ['notekey'] });
+//         const notekeys = notes.map(note => note.notekey);
+//         debug(`KEYLIST ${notekeys}`);
+//         return notekeys;
+//     }
+
+//     async count() {
+//         await connectDB();
+//         const count = await SQNote.count();
+//         debug(`COUNT ${count}`);
+//         return count;
+//     }
 // }
 ```
 
 #### **notez/routes/index.mjs and notez/routes/notes.mjs**
 
 ```javascript
+// bottom of both
 export function init() {}
 ```
 
