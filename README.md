@@ -4269,10 +4269,10 @@ export class AbstractNotesStore extends EventEmitter {
 //     connectDB as connectSequlz,
 //     close as closeSequlz
 // } from './sequlz.mjs';
-// 
+//
 // let sequelize;
 // export class SQNote extends Sequelize.Model { }
-// 
+//
 // async function connectDB() {
 // ...
 // }
@@ -4387,23 +4387,31 @@ null
 #### **notez/routes/index.mjs**
 
 ```javascript
+// import { default as express } from 'express';
+// import { NotesStore as notes } from '../models/notes-store.mjs';
+// import { twitterLogin } from './users.mjs';
+// export const router = express.Router();
 import { io } from '../app.mjs';
-// ...
+
+/* GET home page. */
 router.get('/', async (req, res, next) => {
   try {
     const notelist = await getKeyTitlesList();
+    // console.log(util.inspect(notelist));
     res.render('index', {
       title: 'Notes',
       notelist: notelist,
       user: req.user ? req.user : undefined,
+      twitterLogin: twitterLogin,
     });
-  } catch (e) {
-    next(e);
+  } catch (err) {
+    next(err);
   }
 });
 
 async function getKeyTitlesList() {
   const keylist = await notes.keylist();
+  debug(`getKeyTitlesList ${util.inspect(keylist)}`);
   const keyPromises = keylist.map((key) => notes.read(key));
   const notelist = await Promise.all(keyPromises);
   return notelist.map((note) => {
@@ -4411,8 +4419,10 @@ async function getKeyTitlesList() {
   });
 }
 
+// export const emitNoteTitles = async () => {
 const emitNoteTitles = async () => {
   const notelist = await getKeyTitlesList();
+  debug(`socketio emitNoteTitles ${util.inspect(notes)}`);
   io.of('/home').emit('notetitles', { notelist });
 };
 
@@ -4421,8 +4431,8 @@ export function init() {
     debug('socketio connection on /home');
   });
   notes.on('notecreated', emitNoteTitles);
-  notes.on('noteupdate', emitNoteTitles);
-  notes.on('notedestroy', emitNoteTitles);
+  notes.on('noteupdated', emitNoteTitles);
+  notes.on('notedestroyed', emitNoteTitles);
 }
 ```
 
