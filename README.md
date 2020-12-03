@@ -4443,7 +4443,7 @@ export function init() {
 **_`Changing the home page and layout templates`_**
 
 ```bash section 7
-null
+touch partials/footerjs.hbs
 ```
 
 #### **notez/partials/footerjs.hbs**
