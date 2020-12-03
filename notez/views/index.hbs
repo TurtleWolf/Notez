@@ -27,7 +27,7 @@
                 notedata = notelist[i];
                 console.log(`Adding Note Title ${JSON.stringify(notedata)}`);
                 $('#notetitles')
-                    .append('<a class="btn btn-lg btn-block btn-outline-dark" href="/notes/view?key=' + notedata.key + '">' + notedata.title + '</a>');
+                    .append('<a class="btn btn-lg btn-block btn-outline-light yellowText" href="/notes/view?key=' + notedata.key + '">' + notedata.title + '</a>');
             }
         });
     }); 

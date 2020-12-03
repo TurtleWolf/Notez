@@ -35,11 +35,12 @@ h6 {
   background-color: yellow;
 }
 
+.floatRight {
+  float: right;
+}
+
 @media screen and (min-width: 600px) {
   /* Screens above 600px width */
-  .floatRight {
-    float: right;
-  }
 }
 @media screen and (min-width: 960px) {
   /* Screens above 960px width */

@@ -1,3 +1,4 @@
+import * as util from 'util';
 import { default as express } from 'express';
 import { NotesStore as notes } from '../models/notes-store.mjs';
 import { twitterLogin } from './users.mjs';
@@ -11,9 +12,9 @@ const error = DBG('notez:error-home');
 router.get('/', async (req, res, next) => {
   try {
     const notelist = await getKeyTitlesList();
-    // console.log(util.inspect(notelist));
+    console.log(util.inspect(notelist));
     res.render('index', {
-      title: 'Notes', notelist: notelist,
+      title: 'Notez @ ScriptHammer.com', notelist: notelist,
       user: req.user ? req.user : undefined,
       twitterLogin: twitterLogin
     });
@@ -32,8 +33,8 @@ async function getKeyTitlesList() {
   });
 };
 
-// export const emitNoteTitles = async () => {
-const emitNoteTitles = async () => {
+export const emitNoteTitles = async () => {
+  // const emitNoteTitles = async () => {
   const notelist = await getKeyTitlesList();
   debug(`socketio emitNoteTitles ${util.inspect(notes)}`);
   io.of('/home').emit('notetitles', { notelist });
